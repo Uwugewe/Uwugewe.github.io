@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/d460caf781.js" crossorigin="anonymous"></script>
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class='main-nav'>
+
+        <div class='container'>
+            <div class='main-nav-holder'>
+                <img class='logo' src='./img/logo.png' alt='logo'>
+
+                <div class='mobile-hamburger'>
+                    <i class='fas fa-bars'></i>
+                </div>
+
+                <div class='mobile-holder'>
+
+                    <div class="mobile-close">
+                        <i class='fas fa-times'></i>
+                    </div>
+
+                    <div class='mobile-items'>
+                        <a href='#home'>Strona główna</a>
+                        <a href='#about'>O nas</a>
+                        <a href='#services'>Usługi</a>
+                        <a href='#contact'>Kontakt</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <header>
+            <img class='header-image' src='img/header-img1.jpeg' />
+            <div class='welcome-message'>
+                <h1>Virdi</h1>
+                <hr>
+                <p>Przywróć zieleń w swoim ogrodzie</p>
+            </div>
+        </header>
+
+        <section id='about'>
+            <h2>O nas</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus repellat magni at mollitia labore!
+                Explicabo minus dicta vel voluptas corrupti ea iure dolorum cupiditate, eius iste cum molestias incidunt
+                magnam adipisci labore illum obcaecati nihil cumque voluptatum aliquam voluptatibus totam odio! Vitae
+                repellendus, dolore harum assumenda sequi sapiente aut cum, odit eaque, eum possimus autem. Cum
+                cupiditate suscipit optio eius.
+            </p>
+        </section>
+        <hr>
+        <section id='services'>
+            <h2>Usługi</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima et provident ab assumenda repudiandae
+                sint esse odit magni. Distinctio, doloribus. Dignissimos hic ipsum atque, illo harum unde mollitia
+                minima iste assumenda. Vel exercitationem quos sapiente, nostrum consequatur eos labore odio culpa totam
+                quaerat aliquam obcaecati rerum cum expedita iusto error! Voluptate velit aspernatur consequatur
+                voluptatem doloribus nemo, accusamus est fuga.</p>
+        </section>
+
+        <section id='contact'>
+            <h2>Kontakt</h2>
+
+            <div class='contact-form'>
+                <form id='contact-form' action="https://formspree.io/f/xleaejbe" method="POST">
+                    <label for='name'>Imię:</label>
+                    <input type='text' id='name' name='name'/>
+                    <label for='mail'>Adres e-mail:</label>
+                    <input type='text' id='mail' name='_replyto'/>
+                    <label for='message'>Wiadomość:</label>
+                    <textarea id='message' name='message' rows='5' cols='20'></textarea>
+                    <input id='submit-button' type='submit' value='Wyślij'/>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

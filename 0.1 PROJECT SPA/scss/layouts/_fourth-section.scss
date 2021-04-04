@@ -1,0 +1,84 @@
+#profiles {
+    .profile {
+        @include flexbox;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        padding: 5px 0 25% 0;
+        position: relative;
+        h3 {
+            color: $headers-color;
+            font-family: $secondary-font;
+            font-size: 1.5em;
+            margin-bottom: 0;
+        }
+        p {
+            color: $primary-text-color;
+            font-family: $primary-font;
+            font-weight: lighter;
+            margin-top: 5px;
+        }
+        .profile-data {
+            width: 80%;
+            background-color: #fff;
+            position: absolute;
+            bottom: 8%;
+            left: 50%;
+            padding: 4% 0;
+            transform: translateX(-50%);
+            .social-medias {
+                @include flexbox;
+                height: 0;
+                overflow-y: hidden;
+                justify-content: space-around;
+                align-content: center;
+                padding: 0 30%;
+                transition: all .5s ease;
+                i {
+                    border: 1px solid lightgray;
+                    border-radius: 50%;
+                    width: 30px;
+                    height: 30px;
+                    @include flexbox;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .fa-twitter {
+                    background-color: #1ba5cd;
+                    color: white;
+                }
+            }
+            &:hover {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                .social-medias {
+                    height: 50px;
+                }
+            }
+        }
+
+    }
+}
+
+@media all and (min-width: $large) {
+    #profiles {
+        padding: 0;
+        @include flexbox;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .profile {
+            width: 33%;
+        }
+    }
+}
+
+@media all and (min-width: $large) {
+    #profiles {
+        .profile {
+            padding-bottom: 10%;
+            img {
+                max-width: 100%;;
+            }
+        }
+    }
+}

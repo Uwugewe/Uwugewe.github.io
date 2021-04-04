@@ -1,0 +1,21 @@
+.bg-orange{
+    /* background-color: rgb(219, 219, 219); */
+    height: 100vw;
+}
+
+.bg-blue{
+    background-color: blue;
+}
+
+.fab{
+    font-size: 5em;
+    width: 150px;
+    height: 150px;
+}
+p{
+    font-size: 2em;
+}
+
+hr{
+    width: 40%;
+}

@@ -1,0 +1,42 @@
+@mixin flexbox {
+    display: flex;
+    // flex-wrap: wrap;
+}
+
+@mixin nowrap {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+@mixin mobile-fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    text-align: right;
+    background-color: $primary-color;
+    width: 80%;
+    height: 80%;
+    padding: 0 5%;
+    line-height: 2;
+    font-size: 2em;
+    color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 999;
+}
+
+@mixin upper {
+    text-transform: uppercase;
+}
+
+@mixin button-primary-style {
+    padding: 15px 40px;
+    border-radius: 30px;
+    color: #fff;
+}
+
+@mixin image-tiles {
+    height: 275px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 1em;
+}
