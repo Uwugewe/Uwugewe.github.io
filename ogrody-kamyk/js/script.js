@@ -8,7 +8,7 @@ const slideShow = () => {
         setInterval(() => {
             imgNo++;
             console.log(imgNo);
-            headerImg.setAttribute('src',`../img/header-img${imgNo}.jpeg`);
+            headerImg.setAttribute('src',`img/header-img${imgNo}.jpeg`);
             if(imgNo === 4) {
                 imgNo = 0;
             }
