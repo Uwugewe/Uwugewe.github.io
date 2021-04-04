@@ -21,7 +21,7 @@ const hideStartup = () => {
     console.log(startupDiv);
     setTimeout(() => {
         startupDiv.style.opacity = 0;
-    }, 3000);
+    }, 2000);
 }
 
 hideStartup();
