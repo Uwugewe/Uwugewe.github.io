@@ -1,29 +1,36 @@
 const slideShow = () => {
-
-    let headerImg = document.querySelector('.header-image');
-    let imgNo = 0;
-    console.log(headerImg);
-
-    setTimeout(() => {
-        setInterval(() => {
+    let slidesImg = document.getElementById('slider');
+    let imgNo = 1;
+    setInterval(() => {
+        slidesImg.className += 'fadeOut';
+        setTimeout(() => {
             imgNo++;
-            console.log(imgNo);
-            headerImg.setAttribute('src',`../ogrody-kamyk/img/header-img${imgNo}.jpeg`);
+            slidesImg.setAttribute('src',`../ogrody-kamyk/img/header-img${imgNo}.jpeg`);
+            slidesImg.className = '';
+
             if(imgNo === 4) {
                 imgNo = 0;
             }
-        }, 3000);
-    })
+        },500)
+    },3000);
 }
 
-const hideStartup = () => {
-    let startupDiv = document.querySelector('.welcome-message');
-    console.log(startupDiv);
-    setTimeout(() => {
-        startupDiv.style.opacity = 0;
-    }, 2000);
+const mobileMenu = () => {
+    let hamburger = document.querySelector('.mobile-hamburger');
+    hamburger.addEventListener('click', () => {
+        let mobileMenu = document.querySelector('.mobile-holder');
+        let mobileItems = document.querySelector('.mobile-items');
+        mobileMenu.classList.toggle('visible');
+
+        if(mobileMenu.classList.contains('visible')) {
+            setTimeout(() => {
+                mobileItems.style.display = 'flex';
+            },250);
+        } else {
+            mobileItems.style.display = 'none';
+        }
+    });
 }
 
-hideStartup();
-slideShow();
-
+setTimeout(slideShow, 3000);
+mobileMenu();
