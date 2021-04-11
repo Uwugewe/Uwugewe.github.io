@@ -6,37 +6,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Virdi - Pięlęgnacja ogrodów</title>
-    <link rel="icon" type="image/png" href="../ogrody-kamyk/img/logo-startup.png"/>
+    <link rel="icon" type="image/png" href="../img/logo-startup.png" />
+    <link rel="stylesheet" href="css/media-queries.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/d460caf781.js" crossorigin="anonymous"></script>
     <!--google fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Quicksand:wght@300&display=swap"
+        rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <nav class='main-nav'>
+        <div class='main-nav-holder'>
+            <img class='logo' src='./img/logo-startup.png' alt='logo'>
 
-        <div class='container'>
-            <div class='main-nav-holder'>
-                <img class='logo' src='./img/logo-startup.png' alt='logo'>
+            <div class='mobile-hamburger'>
+                <i class='fas fa-bars'></i>
+            </div>
 
-                <div class='mobile-hamburger'>
-                    <i class='fas fa-bars'></i>
-                </div>
-
-                <div class='mobile-holder'>
-
-                    <div class='mobile-items'>
-                        <a href='#home'>Strona główna</a>
-                        <a href='#about'>O nas</a>
-                        <a href='#services'>Usługi</a>
-                        <a href='#contact'>Kontakt</a>
-                    </div>
-
+            <div class='mobile-holder'>
+                <div class='mobile-items'>
+                    <a href='#'>Strona główna</a>
+                    <a href='#about'>O nas</a>
+                    <a href='#services'>Usługi</a>
+                    <a href='#contact'>Kontakt</a>
                 </div>
             </div>
         </div>
@@ -46,7 +43,16 @@
             <img id='slider' src='img/header-img1.jpeg' />
             <div class='welcome-message'>
                 <img class='logo-in-startup' src='./img/logo-startup.png' alt='logo'>
-                <h1>Przywróć zieleń w swoim ogrodzie</h1>
+                <div class='container'>
+                    <div class='box'>
+                        <h1>Przywróć zieleń w swoim ogrodzie</h1>
+                        
+                        <div class="btn btn-one">
+                            <span>SPRAWDŹ NASZĄ OFERTĘ</span>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium hic commodi quaerat animi quia, repudiandae tempora officia dicta doloribus. Commodi cupiditate voluptatibus nobis alias nesciunt reiciendis quaerat ipsa porro unde labore, voluptates dolorem temporibus facere inventore maiores! Aliquid, minima obcaecati?</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </header>
         <section id='about'>
@@ -74,16 +80,20 @@
             <div class='contact-form'>
                 <form id='contact-form' action="https://formspree.io/f/xleaejbe" method="POST">
                     <label for='name'>Imię:</label>
-                    <input type='text' id='name' name='name'/>
+                    <input type='text' id='name' name='name' required />
                     <label for='mail'>Adres e-mail:</label>
-                    <input type='text' id='mail' name='_replyto'/>
+                    <input type='text' id='mail' name='_replyto' pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                        required />
                     <label for='message'>Wiadomość:</label>
-                    <textarea id='message' name='message' rows='5' cols='20'></textarea>
-                    <input id='submit-button' type='submit' value='Wyślij'/>
+                    <textarea id='message' name='message' rows='5' cols='20' required></textarea>
+                    <input id='submit-button' type='submit' value='Wyślij' />
                 </form>
             </div>
         </section>
     </main>
+    <footer>
+        <span>Copyright &#169; Virdi Kamil Nawrot</span>
+    </footer>
     <script src="js/script.js"></script>
 </body>
 

@@ -5,6 +5,7 @@ html {
 body {
     box-sizing: border-box;
     margin: 0;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .main-nav-holder {
@@ -27,6 +28,7 @@ body {
     border: 1px solid lightgray;
     border-radius: 5%;
     transform: translateY(-50%);
+    cursor: pointer;
 }
 
 .mobile-hamburger i {
@@ -56,7 +58,8 @@ body {
 }
 
 header {
-    /* position: relative; */
+    position: relative;
+    height: 40vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -65,13 +68,13 @@ header {
 
 header .welcome-message {
     position: absolute;
-    /* top: 0; */
+    top: 0;
     opacity: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* height: 100%; */
+    height: 100%;
     width: 100%;
     background-color: white;
     animation-name: startupHideAnimation;
@@ -85,9 +88,13 @@ header .welcome-message .logo-in-startup {
     animation-delay: 1.8s;
 }
 
+header .welcome-message .btn, header .welcome-message .welcome-text {
+    display: none;
+}
+
 #slider {
     width: 100%;
-    /* height: 98%; */
+    height: 99%;
     opacity: 1;
     transition: opacity .5s;
 }
@@ -144,8 +151,7 @@ h1 {
 }
 
 h1, h2, p {
-    font-family: 'Quicksand', sans-serif;
-    text-align: center;
+    text-align: center; 
 }
 
 hr {
@@ -153,6 +159,16 @@ hr {
     height: 1px;
     width: 80%;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+#submit-button {
+    outline: none;
+    cursor: pointer;
+}
+
+footer {
+    padding: 15px 0;
+    text-align: center;
 }
 
 @keyframes startupHideAnimation {

@@ -1,0 +1,210 @@
+@media only screen and (min-width: 768px) {
+    .main-nav, .main-nav .container, .main-nav-holder {
+        height: auto;
+    }
+
+    .main-nav-holder {
+        padding: 2%;
+        z-index: 999;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        background-color: rgba(255,255,255,0.7);
+    }
+
+    .main-nav .main-nav-holder .logo {
+        animation-name: heartBeat;
+        animation-delay: 1s;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+    }
+
+    .mobile-hamburger {
+        display: none;
+    }
+
+    .main-nav .mobile-holder {
+        display: flex;
+        height: auto;
+        width: 100%;
+    }
+
+    .main-nav .mobile-holder .mobile-items {
+        display: flex;
+        width: 100%;
+        font-weight: bolder;
+        font-size: 1.5em;
+    }
+
+    /* main {
+        position: absolute;
+        top: 0;
+    } */
+
+    main header {
+        position: unset;
+        align-items: center;
+        justify-content: flex-start;
+        height: 100%;
+    }
+
+    main header #slider {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+    }
+
+    main header .welcome-message {
+        position: unset;
+        opacity: 1;
+        background-color: transparent;
+        animation: none;
+        background-color: rgba(0,0,0,0.3);
+    }
+
+    main header .welcome-message .container {
+        padding: 5% 20%;
+    }
+
+    main header .welcome-message .container .box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 5%;
+        /* border: 1px solid white; */
+    }
+
+    main header .welcome-message .welcome-text {
+        display: block;
+    }
+/* BUTTON */
+    main header .welcome-message .btn {
+        display: block;
+        line-height: 50px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .btn-one {
+        color: #FFF;
+        transition: all 0.3s;
+        position: relative;
+      }
+      .btn-one span {
+        transition: all 0.3s;
+      }
+      .btn-one::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: 0;
+        transition: all 0.3s;
+        border-top-width: 1px;
+        border-bottom-width: 1px;
+        border-top-style: solid;
+        border-bottom-style: solid;
+        border-top-color: rgba(255,255,255,0.5);
+        border-bottom-color: rgba(255,255,255,0.5);
+        transform: scale(0.1, 1);
+      }
+      .btn-one:hover span {
+        letter-spacing: 2px;
+      }
+      .btn-one:hover::before {
+        opacity: 1; 
+        transform: scale(1, 1); 
+      }
+      .btn-one::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        transition: all 0.3s;
+        background-color: rgba(255,255,255,0.1);
+      }
+      .btn-one:hover::after {
+        opacity: 0; 
+        transform: scale(0.1, 1);
+      }
+ /* BUTON */
+
+    main header .welcome-message .logo-in-startup {
+        display: none;
+    }
+
+    main header .welcome-message h1 {
+        /* color: white; */
+        display: none;
+        font-size: 3.5em;
+        animation-name: pulse;
+        animation-duration: 2s;
+    }
+
+    main section {
+        padding: 5% 20%;
+    }
+
+    main #contact {
+        background-image: url('../img/contact-bg.jpg');
+        background-size: cover;
+    }
+}
+
+@keyframes heartBeat {
+    0% {
+      transform: scale(1);
+    }
+  
+    14% {
+      transform: scale(1.2);
+    }
+  
+    28% {
+      transform: scale(1);
+    }
+  
+    42% {
+      transform: scale(1.2);
+    }
+  
+    70% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes pulse {
+      0% {
+          transform: scale(1.4) translateY(+300%);
+      }
+      50% {
+          transform: scale(1) translateY(+300%);
+      }
+      100% {
+
+      }
+  }
+
+  @keyframes gettingSkinny {
+      0% {
+          width: 100%;
+        }
+      80% {
+          width: 100%;
+
+        }
+      100% {
+          width: 60%;
+        }
+  }

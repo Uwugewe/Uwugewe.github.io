@@ -1,18 +1,21 @@
 const slideShow = () => {
     let slidesImg = document.getElementById('slider');
     let imgNo = 1;
-    setInterval(() => {
-        slidesImg.className += 'fadeOut';
-        setTimeout(() => {
-            imgNo++;
-            slidesImg.setAttribute('src',`../ogrody-kamyk/img/header-img${imgNo}.jpeg`);
-            slidesImg.className = '';
 
-            if(imgNo === 4) {
-                imgNo = 0;
-            }
-        },500)
-    },3000);
+    if(window.innerWidth < 768) {
+        setInterval(() => {
+            slidesImg.className += 'fadeOut';
+            setTimeout(() => {
+                imgNo++;
+                slidesImg.setAttribute('src',`../img/header-img${imgNo}.jpeg`);
+                slidesImg.className = '';
+    
+                if(imgNo === 4) {
+                    imgNo = 0;
+                }
+            },500)
+        },3000);
+    }
 }
 
 const mobileMenu = () => {
@@ -32,5 +35,17 @@ const mobileMenu = () => {
     });
 }
 
-setTimeout(slideShow, 3000);
+const setHeaderHeight = () => {
+    if(window.innerWidth > 768) {
+        let mainNav = document.querySelector('.main-nav');
+        let backgroundImg = document.getElementById('slider');
+        let welcomeMessage = document.querySelector('.welcome-message');
+        let header = document.querySelector('header');
+        header.style.height = `${backgroundImg.clientHeight - mainNav.clientHeight}px`;
+        welcomeMessage.style.height = `${backgroundImg.clientHeight - mainNav.clientHeight}px`;
+    }
+}
+
 mobileMenu();
+slideShow();
+setHeaderHeight();
