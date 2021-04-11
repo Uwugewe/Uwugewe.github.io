@@ -7,7 +7,7 @@ const slideShow = () => {
             slidesImg.className += 'fadeOut';
             setTimeout(() => {
                 imgNo++;
-                slidesImg.setAttribute('src',`../img/header-img${imgNo}.jpeg`);
+                slidesImg.setAttribute('src',`../ogrody-kamyk/img/header-img${imgNo}.jpeg`);
                 slidesImg.className = '';
     
                 if(imgNo === 4) {
