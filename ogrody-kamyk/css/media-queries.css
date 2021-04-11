@@ -1,10 +1,10 @@
 @media only screen and (min-width: 768px) {
-    .main-nav, .main-nav .container, .main-nav-holder {
-        height: auto;
+    .main-nav {
+        height: 26vh;
     }
 
     .main-nav-holder {
-        padding: 2%;
+        height: 100%;
         z-index: 999;
         display: flex;
         justify-content: space-evenly;
@@ -157,7 +157,7 @@
     }
 
     main #contact {
-        background-image: url('../img/contact-bg.jpg');
+        background-image: url('../ogrody-kamyk/img/contact-bg.jpg');
         background-size: cover;
     }
 }
