@@ -41,8 +41,11 @@ const setHeaderHeight = () => {
         let backgroundImg = document.getElementById('slider');
         let welcomeMessage = document.querySelector('.welcome-message');
         let header = document.querySelector('header');
+        console.log(mainNav.clientHeight);
+        console.log(backgroundImg.clientHeight);
         header.style.height = `${backgroundImg.clientHeight - mainNav.clientHeight}px`;
         welcomeMessage.style.height = `${backgroundImg.clientHeight - mainNav.clientHeight}px`;
+        console.log(welcomeMessage.clientHeight);
     }
 }
 
