@@ -7,7 +7,7 @@ const slideShow = () => {
             slidesImg.className += 'fadeOut';
             setTimeout(() => {
                 imgNo++;
-                slidesImg.setAttribute('src',`../ogrody-kamyk/img/header-img${imgNo}.jpeg`);
+                slidesImg.setAttribute('src',`../img/header-img${imgNo}.jpeg`);
                 slidesImg.className = '';
     
                 if(imgNo === 4) {
@@ -41,14 +41,19 @@ const setHeaderHeight = () => {
         let backgroundImg = document.getElementById('slider');
         let welcomeMessage = document.querySelector('.welcome-message');
         let header = document.querySelector('header');
-        console.log(mainNav.clientHeight);
-        console.log(backgroundImg.clientHeight);
+
         header.style.height = `${backgroundImg.clientHeight - mainNav.clientHeight}px`;
         welcomeMessage.style.height = `${backgroundImg.clientHeight - mainNav.clientHeight}px`;
-        console.log(welcomeMessage.clientHeight);
     }
+}
+
+const scrollEffects = () => {
+    let windowHeight = window.innerHeight;
+    console.log(windowHeight);
+
 }
 
 mobileMenu();
 slideShow();
 setHeaderHeight();
+scrollEffects();

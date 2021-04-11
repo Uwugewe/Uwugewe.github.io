@@ -6,6 +6,7 @@
     .main-nav-holder {
         height: 100%;
         z-index: 999;
+        padding: 0 5%;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
@@ -39,11 +40,6 @@
         font-size: 1.5em;
     }
 
-    /* main {
-        position: absolute;
-        top: 0;
-    } */
-
     main header {
         position: unset;
         align-items: center;
@@ -76,7 +72,6 @@
         justify-content: space-evenly;
         align-items: center;
         padding: 5%;
-        /* border: 1px solid white; */
     }
 
     main header .welcome-message .welcome-text {
@@ -145,11 +140,23 @@
     }
 
     main header .welcome-message h1 {
-        /* color: white; */
         display: none;
         font-size: 3.5em;
         animation-name: pulse;
         animation-duration: 2s;
+    }
+
+    main header .wrapper {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+
+    main header .wrapper .triangle-down div {
+        border-left: 1000px solid transparent; 
+        border-right: 1000px solid white; 
+        border-top: 100px solid transparent; 
     }
 
     main section {
@@ -157,8 +164,41 @@
     }
 
     main #contact {
+        padding: 0;
         background-image: url('../img/contact-bg.jpg');
         background-size: cover;
+    }
+
+    main #contact .wrapper {
+        display: block;
+    }
+
+    main #contact .triangle-down div {
+        border-left: 1000px solid transparent; 
+        border-right: 1000px solid white; 
+        border-top: 100px solid white; 
+    }
+
+    main #contact .contact-form {
+        padding: 5% 20%;
+    }
+
+    main .triangle-down {
+        box-sizing: content-box;
+        width: 50%; 
+        height: 0;
+        padding-left:50%;
+        padding-top: 5%; 
+        overflow: hidden;
+    }
+    .triangle-down div {
+        width: 0;
+        height: 0;
+        margin-left:-1000px; 
+        margin-top:-100px; 
+        border-left: 1000px solid transparent; 
+        border-right: 1000px solid transparent; 
+        border-top: 100px solid #9387c6; 
     }
 }
 
