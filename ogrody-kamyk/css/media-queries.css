@@ -157,7 +157,7 @@
     }
 
     main #contact {
-        background-image: url('./img/contact-bg.jpg');
+        background-image: url('../img/contact-bg.jpg');
         background-size: cover;
     }
 }
