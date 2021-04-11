@@ -167,6 +167,7 @@
         padding: 0;
         background-image: url('../img/contact-bg.jpg');
         background-size: cover;
+        background-attachment: fixed;
     }
 
     main #contact .wrapper {
