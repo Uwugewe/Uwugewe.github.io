@@ -40,6 +40,12 @@
         font-size: 1.5em;
     }
 
+    .main-nav .mobile-holder .mobile-items a:hover {
+        transform: scale(1.1);
+        color: black;
+        transition: .2s all ease;
+    }
+
     main header {
         position: unset;
         align-items: center;
