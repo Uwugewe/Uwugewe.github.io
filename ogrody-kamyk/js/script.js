@@ -61,4 +61,4 @@ const scrollEffects = () => {
 mobileMenu();
 slideShow();
 setHeaderHeight();
-scrollEffects();
+// scrollEffects();
