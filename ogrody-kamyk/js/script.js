@@ -7,7 +7,7 @@ const slideShow = () => {
             slidesImg.className += 'fadeOut';
             setTimeout(() => {
                 imgNo++;
-                slidesImg.setAttribute('src',`../img/header-img${imgNo}.jpeg`);
+                slidesImg.setAttribute('src',`../ogrody-kamyk/img/header-img${imgNo}.jpeg`);
                 slidesImg.className = '';
     
                 if(imgNo === 4) {
@@ -49,7 +49,12 @@ const setHeaderHeight = () => {
 
 const scrollEffects = () => {
     let windowHeight = window.innerHeight;
-    console.log(windowHeight);
+    let element = document.getElementById('about');
+    document.addEventListener('scroll', () => {
+        console.log(windowHeight);
+        console.log(document.body.scrollTop);
+        console.log(element.offsetHeight);
+    })
 
 }
 
