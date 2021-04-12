@@ -8,6 +8,10 @@ body {
     font-family: 'Quicksand', sans-serif;
 }
 
+.fixed, .fixed-2 {
+    display: none;
+}
+
 .main-nav-holder {
     position: relative;
 }
