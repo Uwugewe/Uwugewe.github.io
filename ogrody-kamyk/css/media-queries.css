@@ -52,12 +52,27 @@
     .fixed-2:hover .LI-profile-badge {
         width: 250px;
         height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         transform: scale(1);
         visibility: visible;
     }
 
+    .fixed-2:hover .LI-profile-badge img {
+        width: 250px;
+    }
+
     .fixed:hover i, .fixed-2:hover i {
         font-size: 0;
+    }
+
+    .fixed-2:hover .LI-profile-badge a {
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        color: white;
+        font-weight: bold;
     }
 
     .main-nav {
@@ -253,7 +268,27 @@
     }
 
     #contact .contact-form {
-        padding: 5% 20%;
+        padding: 5% 15%;
+    }
+
+    #contact .contact-form #contact-form {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #contact .contact-form input[type=text], #contact .contact-form textarea {
+        width: 80%;
+        border-radius: 15px;
+        background-color: rgba(255,255,255,.7);
+        border: 1px solid white;
+        padding: 5px 15px;
+    }
+
+    #contact .contact-form input[type=text]:focus, #contact .contact-form textarea:focus {
+        width: 100%;
+        transition: ease width .4s;
     }
 
     #contact .contact-form input:focus, #contact .contact-form textarea {
