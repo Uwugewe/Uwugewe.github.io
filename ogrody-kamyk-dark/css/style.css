@@ -1,0 +1,213 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.fixed, .fixed-2 {
+    display: none;
+}
+
+.main-nav-holder {
+    position: relative;
+}
+
+.main-nav-holder .logo {
+    width: 150px;
+    margin: 0 10px;
+    animation-name: show-logo;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+}
+
+.mobile-hamburger {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    padding: 5px 10px;
+    color: lightgray;
+    border: 1px solid lightgray;
+    border-radius: 5%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.mobile-hamburger i {
+    font-size: 3em;
+}
+
+.mobile-holder {
+    height: 0;
+    transition: all .5s ease;
+}
+
+.mobile-holder .mobile-items {
+    display: none;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.mobile-holder .mobile-items a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color:rgb(77, 77, 77);
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.visible {
+    height: 50px;
+}
+
+header {
+    position: relative;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+header .welcome-message {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    animation-name: startupHideAnimation;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+}
+
+header .welcome-message .logo-in-startup {
+    animation-name: bounceOut;
+    animation-duration: 1.2s;
+    animation-delay: 1.8s;
+}
+
+header .welcome-message .btn, header .welcome-message .welcome-text {
+    display: none;
+}
+
+#slider {
+    width: 100%;
+    height: 99%;
+    opacity: 1;
+    transition: opacity .5s;
+}
+
+#slider.fadeOut {
+    opacity: .1;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    width: 60%;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+section {
+    padding: 20px 50px;
+    margin: 20px 0;
+}
+
+#contact {
+    background-color: rgb(38, 161, 0);
+    color: white;
+    margin-bottom: 0;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+}
+
+#contact-form input[type=text] {
+    line-height: 2.5;
+    margin-bottom: 20px;
+    margin-top: 3px;
+}
+
+#submit-button {
+    width: 50%;
+    padding: 10px 0;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 10px;
+    text-transform: uppercase;
+    color: white;
+    margin: 20px auto;
+}
+
+h1 {
+    font-size: 1.7em;
+}
+
+h1, h2, p {
+    text-align: center; 
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    width: 80%;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+#submit-button {
+    outline: none;
+    cursor: pointer;
+}
+
+footer {
+    padding: 15px 0;
+    text-align: center;
+}
+
+.wrapper {
+    display: none;
+}
+
+@keyframes startupHideAnimation {
+0% {opacity: 1;}
+70% {opacity: 1;}
+100% {opacity: 0;}
+}
+
+@keyframes show-logo {
+    0% {opacity: 0;}
+    80% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes bounceOut {
+    20% {
+      -webkit-transform: scale3d(0.9, 0.9, 0.9);
+      transform: scale3d(0.9, 0.9, 0.9);
+    }
+  
+    50%,
+    55% {
+      opacity: 1;
+      -webkit-transform: scale3d(1.1, 1.1, 1.1);
+      transform: scale3d(1.1, 1.1, 1.1);
+    }
+  
+    to {
+      opacity: 0;
+      -webkit-transform: scale3d(0.3, 0.3, 0.3);
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+  }
