@@ -12,6 +12,10 @@ body {
     display: none;
 }
 
+#myVideo {
+    display: none;
+}
+
 .main-nav-holder {
     position: relative;
 }
