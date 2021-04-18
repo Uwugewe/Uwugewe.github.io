@@ -131,9 +131,11 @@ section {
 }
 
 #contact {
-    background-color: rgb(38, 161, 0);
     color: white;
     margin-bottom: 0;
+    background-image: url(../ogrody-kamyk-dark/img/contact-bg2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 #contact-form {

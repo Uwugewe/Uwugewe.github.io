@@ -296,9 +296,6 @@
 
     #contact {
         padding: 0;
-        background-image: url('../img/contact-bg2.jpg');
-        background-size: cover;
-        background-attachment: fixed;
     }
 
     #contact .wrapper {
