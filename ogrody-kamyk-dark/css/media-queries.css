@@ -103,7 +103,7 @@
     }
 
     .main-nav .main-nav-holder .logo {
-        animation-name: show-logo-desktop;
+        animation-name: fadeIn;
         animation-duration: 2s;
         animation-timing-function: ease-in-out;
     }
@@ -272,6 +272,28 @@
         line-height: 2;
     }
 
+    #services {
+        padding: 5%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    #services .services-card-row {
+        width: 33%;
+        visibility: hidden;
+    }
+
+    #services .services-card-row .card-text {
+        padding: 10px;
+    }
+
+    #services .animateCard {
+        animation-name: fadeInUp;
+        animation-duration: .5s;
+        visibility: visible;
+    }
+
     #contact {
         padding: 0;
         background-image: url('../img/contact-bg2.jpg');
@@ -371,7 +393,7 @@
       }
   }
 
-  @keyframes show-logo-desktop {
+  @keyframes fadeIn {
     0% {opacity: 0;}
     100% {opacity: 1;}
 }
@@ -384,6 +406,20 @@
     }
   
     to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 100%, 0);
+      transform: translate3d(0, 100%, 0);
+    }
+  
+    to {
+      opacity: 1;
       -webkit-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0);
     }

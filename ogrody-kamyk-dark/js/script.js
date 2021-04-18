@@ -35,30 +35,29 @@ const mobileMenu = () => {
     });
 }
 
-const setHeaderHeight = () => {
-    if(window.innerWidth > 768) {
-        let mainNav = document.querySelector('.main-nav');
-        let backgroundImg = document.getElementById('slider');
-        let welcomeMessage = document.querySelector('.welcome-message');
-        let header = document.querySelector('header');
+const scrollEffectsServices = (elements) => {
+    let windowHeight = window.innerHeight;
+    let servicesSection = document.getElementById('services');
+    let setTimeoutValue = -400;
 
-        header.style.height = `${backgroundImg.clientHeight - mainNav.clientHeight}px`;
-        welcomeMessage.style.height = `${backgroundImg.clientHeight - mainNav.clientHeight}px`;
-    }
+    document.addEventListener('scroll', () => {
+        if(servicesSection.getBoundingClientRect().top < windowHeight-(servicesSection.clientHeight/2) && !elements[0].classList.contains('animateCard')) {
+            elements.forEach(element => {
+                setTimeoutValue += 400;
+                setTimeout(() => {
+                    element.classList.add('animateCard');
+                },setTimeoutValue);
+            });
+        }
+    });
 }
 
-const scrollEffects = () => {
-    let windowHeight = window.innerHeight;
-    let element = document.getElementById('about');
-    document.addEventListener('scroll', () => {
-        console.log(windowHeight);
-        console.log(document.body.scrollTop);
-        console.log(element.offsetHeight);
-    })
+const doSmthOnViewport = () => {
+    let cards = document.querySelectorAll('.services-card-row');
 
+    scrollEffectsServices(cards);
 }
 
 mobileMenu();
 slideShow();
-setHeaderHeight();
-// scrollEffects();
+doSmthOnViewport();

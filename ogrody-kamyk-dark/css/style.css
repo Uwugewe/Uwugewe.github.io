@@ -23,7 +23,7 @@ body {
 .main-nav-holder .logo {
     width: 150px;
     margin: 0 10px;
-    animation-name: show-logo;
+    animation-name: fadeInLater;
     animation-duration: 3s;
     animation-timing-function: ease-in-out;
 }
@@ -124,6 +124,12 @@ section {
     margin: 20px 0;
 }
 
+.services-card-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #contact {
     background-color: rgb(38, 161, 0);
     color: white;
@@ -190,7 +196,7 @@ footer {
 100% {opacity: 0;}
 }
 
-@keyframes show-logo {
+@keyframes fadeInLater {
     0% {opacity: 0;}
     80% {opacity: 0;}
     100% {opacity: 1;}
