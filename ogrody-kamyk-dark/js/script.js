@@ -1,7 +1,7 @@
 const setLogoVersion = () => {
     if(window.innerWidth > 768) {
         let logo = document.querySelector('.logo');
-        logo.setAttribute('src','img/logo-desktop.png');
+        logo.setAttribute('src','../ogrody-kamyk-dark/img/logo-desktop.png');
     }
 }
 
