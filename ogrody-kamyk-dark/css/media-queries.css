@@ -229,8 +229,6 @@
         opacity: 0; 
         transform: scale(0.1, 1);
       }
-      
- /* BUTON */
 
     #check-offer-btn {
         background-color: #fff;
@@ -239,6 +237,8 @@
         border-radius: 25px;
         margin: 20px 0;
     }
+
+     /* BUTON */
 
     .header-container header .welcome-message .logo-in-startup {
         display: none;
@@ -300,7 +300,6 @@
 
     #about .about-content {
         justify-content: space-evenly;
-        text-align: center;
     }
 
     #about .profile {
