@@ -1,3 +1,10 @@
+const setLogoVersion = () => {
+    if(window.innerWidth > 768) {
+        let logo = document.querySelector('.logo');
+        logo.setAttribute('src','img/logo-desktop.png');
+    }
+}
+
 const slideShow = () => {
     let slidesImg = document.getElementById('slider');
     let imgNo = 1;
@@ -52,12 +59,29 @@ const scrollEffectsServices = (elements) => {
     });
 }
 
-const doSmthOnViewport = () => {
-    let cards = document.querySelectorAll('.services-card-row');
-
-    scrollEffectsServices(cards);
+const scrollEffectsSection = (section) => {
+    let windowHeight = window.innerHeight;
+    
+    document.addEventListener('scroll', () => {
+        if(section.getBoundingClientRect().top < windowHeight-(section.clientHeight/2) && !section.classList.contains('animateSection')) {
+            setTimeout(() => {
+                section.classList.add('animateSection');
+            },100);
+        }
+    });
 }
 
+const doSmthOnViewport = () => {
+    let cards = document.querySelectorAll('.services-card-row');
+    let aboutSection = document.getElementById('about');
+    let projectsSection = document.getElementById('projects');
+
+    scrollEffectsServices(cards);
+    scrollEffectsSection(aboutSection);
+    scrollEffectsSection(projectsSection);
+}
+
+setLogoVersion();
 mobileMenu();
 slideShow();
 doSmthOnViewport();

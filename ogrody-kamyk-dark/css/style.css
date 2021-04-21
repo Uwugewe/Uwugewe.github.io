@@ -58,7 +58,7 @@ body {
 .mobile-holder .mobile-items a {
     text-decoration: none;
     text-transform: uppercase;
-    color:rgb(77, 77, 77);
+    color:#fff;
     font-family: 'Open Sans Condensed', sans-serif;
 }
 
@@ -128,6 +128,10 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#about {
+    background-color: rgb(241, 241, 241);
 }
 
 #contact {

@@ -82,7 +82,7 @@
 
     .header-container {
         position: relative;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, .55);
     }
 
     .main-nav {
@@ -99,7 +99,6 @@
         align-items: center;
         flex-direction: row;
         flex-wrap: nowrap;
-        background-color: rgba(255,255,255,0.8);
     }
 
     .main-nav .main-nav-holder .logo {
@@ -126,9 +125,9 @@
     }
 
     .main-nav .mobile-holder .mobile-items a:hover {
-        transform: scale(1.1);
-        color: black;
-        transition: .2s all ease;
+        animation-name: headShake;
+        animation-duration: .4s;
+        animation-timing-function: ease-in-out;
     }
 
     .header-container #myVideo {
@@ -158,7 +157,6 @@
         opacity: 1;
         background-color: transparent;
         animation: none;
-        /* background-color: rgba(0,0,0,.5); */
     }
 
     .header-container header .welcome-message .container {
@@ -180,7 +178,6 @@
         display: block;
         line-height: 50px;
         text-align: center;
-        cursor: pointer;
     }
 
     .btn-one {
@@ -190,7 +187,7 @@
       }
       .btn-one h1 {
         transition: all 0.3s;
-        font-size: 1.7em;
+        font-size: 30px;
       }
       .btn-one::before {
         content: '';
@@ -238,8 +235,8 @@
     #check-offer-btn {
         background-color: #fff;
         padding: 15px 25px;
-        border: 1px solid white;
-        border-radius: 0;
+        border: none;
+        border-radius: 25px;
         margin: 20px 0;
     }
 
@@ -274,6 +271,9 @@
 
     #services {
         padding: 5%;
+    }
+
+    #services .services-content, #about .about-content {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -291,6 +291,38 @@
     #services .animateCard {
         animation-name: fadeInUp;
         animation-duration: .5s;
+        visibility: visible;
+    }
+
+    #about {
+        padding: 0;
+    }
+
+    #about .about-content {
+        justify-content: space-evenly;
+        text-align: center;
+    }
+
+    #about .profile {
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+    }
+
+    #about .profile-description {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #about, #projects {
+        visibility: hidden;
+    }
+
+    #about.animateSection, #projects.animateSection{ 
+        animation-name: flipInX;
+        animation-duration: 1s;
         visibility: visible;
     }
 
@@ -419,5 +451,70 @@
       opacity: 1;
       -webkit-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0);
+    }
+  }
+
+  @keyframes headShake {
+    0% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  
+    6.5% {
+      -webkit-transform: translateX(-6px) rotateY(-9deg);
+      transform: translateX(-6px) rotateY(-9deg);
+    }
+  
+    18.5% {
+      -webkit-transform: translateX(5px) rotateY(7deg);
+      transform: translateX(5px) rotateY(7deg);
+    }
+  
+    31.5% {
+      -webkit-transform: translateX(-3px) rotateY(-5deg);
+      transform: translateX(-3px) rotateY(-5deg);
+    }
+  
+    43.5% {
+      -webkit-transform: translateX(2px) rotateY(3deg);
+      transform: translateX(2px) rotateY(3deg);
+    }
+  
+    50% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes flipInX {
+    from {
+      -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+      transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+      opacity: 0;
+    }
+  
+    40% {
+      -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+      transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+  
+    60% {
+      -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+      transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+      opacity: 1;
+    }
+  
+    80% {
+      -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+      transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    }
+  
+    to {
+      -webkit-transform: perspective(400px);
+      transform: perspective(400px);
     }
   }
