@@ -124,6 +124,10 @@
         font-size: 1.5em;
     }
 
+    .main-nav .mobile-holder .mobile-items a {
+        color: #fff;
+    }
+
     .main-nav .mobile-holder .mobile-items a:hover {
         animation-name: headShake;
         animation-duration: .4s;
