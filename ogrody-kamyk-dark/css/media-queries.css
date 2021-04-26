@@ -1,14 +1,11 @@
 @media only screen and (min-width: 768px) {
 
-    body .fixed, body .fixed-2 {
+    body .fixed {
         display: block;
         position: fixed;
         background-color: lightgray;
         z-index: 999;
         padding: 20px;
-    }
-
-    .fixed {
         left: 0;
         top: 80%;
         border-radius: 0 30px 30px 0;
@@ -30,7 +27,7 @@
         font-size: 1em;
     }
 
-    .fixed:hover i, .fixed-2:hover i {
+    .fixed:hover i {
         font-size: 0;
     }
 
