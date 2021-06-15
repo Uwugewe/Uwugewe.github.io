@@ -1,0 +1,120 @@
+.display-block {
+    display: block !important;
+}
+
+.main-nav {
+    width: 100%;
+    background-color: white;
+
+    .brand {
+        height: 50px;
+        display: inline-block;
+
+        img {
+            height: 100%;;
+        }
+    }
+
+    .main-nav-holder{
+        @include flexbox;
+        justify-content: space-between;
+        padding-top: 5px;
+    }
+
+    .mobile-hamburger{
+        @include flexbox;
+        align-items: center;
+        color: $primary-color;
+        font-size: 150%;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .open-mobile-holder{
+        @include mobile-fixed;
+        display: none;
+        .menu-items {
+            display: flex;
+            flex-direction: column;
+        }
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+}
+
+@media all and (min-width: $large) {
+    .main-nav {
+        height: 100px;
+        .container {
+            height: inherit;
+        }
+        .main-nav-holder {
+            justify-content: flex-start;
+            height: inherit;
+            img {
+                width: 100px;
+                height: 80px;
+            }
+            .mobile-close {
+                display: none;
+            }
+            #mobile-holder {
+                width: 70%;
+                padding-left: 5%;
+                @include flexbox;
+                align-items: center;
+                .menu-items {
+                    display: flex;
+                    width: 100%;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                    a {
+                        color: $headers-color;
+                        font-size: 1.2em;
+                        text-decoration: none;
+                        color: $headers-color;
+                    }
+                }
+            }
+
+            .open-mobile-holder {
+                width: 100%;
+                padding: 0 0 0 5%;
+                display: flex;
+                justify-content: center;
+                background-color: transparent;
+                box-shadow: none;
+                font-size: 1em;
+            }
+        }
+        .mobile-hamburger {
+            display: none;
+        }
+    }
+}
+
+@media all and (min-width: $extra-large) {
+    .main-nav {
+        background-color: transparent;
+        font-size: 0.7em;
+        @include upper;
+        font-weight: bold;
+        .brand {
+            width: 80px;
+            height: 60px;
+            img {
+                width: 80px;
+                height: 60px;
+            }
+        }
+        .menu-items {
+            @include flexbox;
+            align-items: center !important;
+            justify-content: flex-start;
+        }
+    }
+}

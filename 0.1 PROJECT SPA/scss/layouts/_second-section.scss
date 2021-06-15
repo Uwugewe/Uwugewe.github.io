@@ -1,0 +1,63 @@
+.second-section-tiles{
+
+    .tile {
+        @include image-tiles;
+    }
+    .first-tile {
+        background-image: url('../img/services-bg-1.jpg');
+    }
+
+    .second-tile {
+        background-image: url('../img/services-bg-2.jpg');
+    }
+
+    .third-tile {
+        background-image: url('../img/services-bg-3.jpg');
+    }
+
+    .fourth-tile {
+        background-image: url('../img/services-bg-4.jpg');
+    }
+
+    .tile-active{
+        @include flexbox;
+        opacity: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 200%;
+        height: inherit;
+        width: 100%;
+        background-color: rgba(44, 169, 206, 0.9);
+        font-family: $secondary-font;
+        transition: 1s ease;
+        img {
+            width: 10%;
+        }
+        p {
+            color: white;
+        }
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+@media all and (min-width: $large) {
+    #features {
+        display: flex;
+        flex-wrap: wrap;
+        .tile {
+            width: 50%;
+            margin: 0;
+        }
+    }
+}
+
+@media all and (min-width: $extra-large) {
+    #features {
+        .tile {
+            width: 25%;
+        }
+    }
+}

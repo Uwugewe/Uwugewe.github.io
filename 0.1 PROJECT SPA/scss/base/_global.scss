@@ -1,0 +1,113 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $primary-font;
+    color: $primary-text-color;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    color: $headers-color;
+    font-family: $secondary-font;
+}
+
+p {
+    font-family: $primary-font;
+    color: $primary-text-color;
+    font-weight: lighter;
+}
+
+.container {
+    max-width: $small-container;
+    width: $small-container;
+    padding: 0 23px;
+    margin: 0 auto;
+}
+
+.container-fluid {
+    max-width: $small-container;
+    width: $small-container;
+    padding: 0 23px;
+    margin: 0;
+}
+
+.section-header {
+    padding: 15% 0;
+    text-align: center;
+}
+
+.card {
+    margin-top: 5%;
+    padding: 5% 0;
+    border: 1px solid lightgray;
+    transition: .5s ease;
+    text-align: center;
+    img {
+        width: 90%;
+    }
+    .card-text {
+        padding: 5% 10%;
+        line-height: 2;
+        button {
+            @include button-primary-style;
+            @include upper;
+            background-color: $buttons-primary;
+            margin: 8% 0;
+        }
+    }
+    &:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border: none;
+    }
+}
+
+button {
+    border: none;
+}
+
+@media all and (min-width: $large) {
+    .container {
+        max-width: $large-container;
+        padding: 0 15%;
+    }
+    #services, #blog {
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .section-header {
+        width: 100%;
+        padding: 10% 15%;
+    }
+    .card {
+        width: 32%;
+        padding: 2% 0;
+    }
+}
+
+@media all and (min-width: $extra-large) {
+    .container {
+        padding: 0 23px;
+    }
+    .section-header {
+        padding: 10% 10% 5% 10%;
+    }
+    .card {
+        margin-top: 0;
+        .card-text {
+            padding: 0 10%;
+        }
+    }
+}
+

@@ -1,0 +1,15 @@
+@import 'utils/mixins';
+@import 'utils/variables';
+
+@import 'base/normalize';
+@import 'base/global';
+
+@import 'layouts/nav';
+@import 'layouts/header';
+@import 'layouts/first-section';
+@import 'layouts/second-section';
+@import 'layouts/fourth-section';
+@import 'layouts/form';
+@import 'layouts/footer';
+
+@import 'components/js-responsive';

@@ -1,0 +1,93 @@
+.header-image {
+    display: none;
+}
+
+.header-image-left {
+    width: 50px;
+    position: absolute;
+    top: 70px;
+    left: -10px;
+    z-index: -1;
+}
+
+header {
+    font-family: $secondary-font;
+    position: relative;
+    margin: 2em 0;
+
+    span {
+        font-weight: bold;
+    }
+
+    h1 {
+        color: $headers-color;
+        margin: 0;
+        font-size: 2.5em;
+    }
+
+    p {
+        font-family: $primary-font;
+        font-weight: normal;
+    }
+
+    .header-buttons {
+        @include nowrap;
+
+        button {
+            @include upper;
+            background-color: $buttons-secondary;
+            font-family: $primary-font;
+            color: #fff;
+            padding: 10px 30px;
+            margin-right: 10px;
+        } 
+        
+        a {
+            @include flexbox;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        i {
+            font-size: 2em;
+            color: #835285;
+            margin-right: 1rem;
+        }
+        
+    }
+}
+
+@media all and (max-width: 230px) {
+    .header-buttons {
+        flex-direction: column;
+    }       
+}
+
+@media all and (min-width: $large) {
+    .header-image-left {
+        width: 200px;
+        top: 150px;
+        left: -30px;
+    }
+}
+
+@media all and (min-width: $extra-large) {
+    
+    .header-image {
+        width: 440px;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0px;
+        z-index: -999;
+    }
+    .header-image-left {
+        width: 200px;
+        left: -30px;
+    }
+
+    #header {
+        padding-top: 7%;
+        padding-right: 20%;
+    }
+}

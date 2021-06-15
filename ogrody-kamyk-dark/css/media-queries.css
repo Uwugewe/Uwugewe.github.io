@@ -1,0 +1,475 @@
+@media only screen and (min-width: 768px) {
+
+    body .fixed {
+        display: block;
+        position: fixed;
+        background-color: lightgray;
+        z-index: 999;
+        padding: 20px;
+        left: 0;
+        top: 80%;
+        border-radius: 0 30px 30px 0;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .fixed span {
+        font-size: 0;
+        font-weight: bold;
+        transition: .3s all ease;
+    }
+
+    .fixed i {
+        transition: .3s all ease;
+        color: rgb(33, 172, 33);
+    }
+
+    .fixed:hover span {
+        font-size: 1em;
+    }
+
+    .fixed:hover i {
+        font-size: 0;
+    }
+
+    .header-container {
+        position: relative;
+        background-color: rgba(0, 0, 0, .55);
+    }
+
+    .main-nav {
+        height: 20vh;
+        animation-name: slideInDown;
+        animation-duration: 1s;
+    }
+
+    .main-nav-holder {
+        height: 100%;
+        padding: 0 5%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .main-nav .main-nav-holder .logo {
+        animation-name: fadeIn;
+        animation-duration: 2s;
+        animation-timing-function: ease-in-out;
+    }
+
+    .mobile-hamburger {
+        display: none;
+    }
+
+    .main-nav .mobile-holder {
+        display: flex;
+        height: auto;
+        width: 100%;
+    }
+
+    .main-nav .mobile-holder .mobile-items {
+        display: flex;
+        width: 100%;
+        font-weight: bolder;
+        font-size: 1.5em;
+    }
+
+    .main-nav .mobile-holder .mobile-items a {
+        color: #fff;
+    }
+
+    .main-nav .mobile-holder .mobile-items a:hover {
+        animation-name: headShake;
+        animation-duration: .4s;
+        animation-timing-function: ease-in-out;
+    }
+
+    .header-container #myVideo {
+        display: block;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+        z-index: -1;
+    }
+
+    .header-container header {
+        position: unset;
+        align-items: center;
+        justify-content: flex-start;
+        height: 80vh;
+    }
+
+    .header-container header #slider {
+        height: 100%;
+        display: none;
+    }
+
+    .header-container header .welcome-message {
+        position: unset;
+        opacity: 1;
+        background-color: transparent;
+        animation: none;
+    }
+
+    .header-container header .welcome-message .container {
+        padding: 5% 20%;
+    }
+
+    .header-container header .welcome-message .container .box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .header-container header .welcome-message .welcome-text {
+        display: block;
+    }
+/* BUTTON */
+    .header-container header .welcome-message .btn {
+        display: block;
+        line-height: 50px;
+        text-align: center;
+    }
+
+    .btn-one {
+        color: #FFF;
+        transition: all 0.3s;
+        position: relative;
+      }
+      .btn-one h1 {
+        transition: all 0.3s;
+        font-size: 30px;
+      }
+      .btn-one::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: 0;
+        transition: all 0.3s;
+        border-top-width: 1px;
+        border-bottom-width: 1px;
+        border-top-style: solid;
+        border-bottom-style: solid;
+        border-top-color: rgba(255,255,255,0.5);
+        border-bottom-color: rgba(255,255,255,0.5);
+        transform: scale(0.1, 1);
+      }
+      .btn-one:hover h1 {
+        letter-spacing: 2px;
+      }
+      .btn-one:hover::before {
+        opacity: 1; 
+        transform: scale(1, 1); 
+      }
+      .btn-one::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        transition: all 0.3s;
+      }
+
+      .btn-one:hover::after {
+        opacity: 0; 
+        transform: scale(0.1, 1);
+      }
+
+    #check-offer-btn {
+        background-color: #fff;
+        padding: 15px 25px;
+        border: none;
+        border-radius: 25px;
+        margin: 20px 0;
+    }
+
+     /* BUTON */
+
+    .header-container header .welcome-message .logo-in-startup {
+        display: none;
+    }
+
+    .header-container header .welcome-message .h1-mobile {
+        display: none;
+        font-size: 3.5em;
+        animation-name: pulse;
+        animation-duration: 2s;
+    }
+
+    .header-container header .wrapper {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .header-container header .wrapper .triangle-down div {
+        border-left: 1000px solid transparent; 
+        border-right: 1000px solid white; 
+        border-top: 100px solid transparent; 
+    }
+
+    body section {
+        padding: 5% 20%;
+        line-height: 2;
+    }
+
+    #services {
+        padding: 5%;
+    }
+
+    #services .services-content, #about .about-content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    #services .services-card-row {
+        width: 33%;
+        visibility: hidden;
+    }
+
+    #services .services-card-row .card-text {
+        padding: 10px;
+    }
+
+    #services .animateCard {
+        animation-name: fadeInUp;
+        animation-duration: .5s;
+        visibility: visible;
+    }
+
+    #about {
+        padding: 0;
+    }
+
+    #about .about-content {
+        justify-content: space-between;
+    }
+
+    #about .profile {
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+    }
+
+    #about .profile-description {
+        width: 50%;
+        padding-right: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #about, #projects {
+        visibility: hidden;
+    }
+
+    #about.animateSection, #projects.animateSection{ 
+        animation-name: flipInX;
+        animation-duration: 1s;
+        visibility: visible;
+    }
+
+    #contact {
+        padding: 0;
+    }
+
+    #contact .wrapper {
+        display: block;
+    }
+
+    #contact .triangle-down div {
+        border-left: 1000px solid transparent; 
+        border-right: 1000px solid white; 
+        border-top: 100px solid white; 
+    }
+
+    #contact .contact-form {
+        padding: 5% 15%;
+    }
+
+    #contact .contact-form #contact-form {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #contact .contact-form input[type=text], #contact .contact-form textarea {
+        width: 80%;
+        border-radius: 15px;
+        background-color: rgba(255,255,255,.7);
+        border: 1px solid white;
+        padding: 5px 15px;
+    }
+
+    #contact .contact-form input[type=text]:focus, #contact .contact-form textarea:focus {
+        width: 100%;
+        transition: ease width .4s;
+    }
+
+    #contact .contact-form input:focus, #contact .contact-form textarea {
+        outline: none;
+    }
+
+    #contact .contact-form input[type=submit]:hover {
+        background-color: rgba(255,255,255,.2);
+    }
+
+    .triangle-down {
+        box-sizing: content-box;
+        width: 50%; 
+        height: 0;
+        padding-left:50%;
+        padding-top: 5%; 
+        overflow: hidden;
+    }
+    .triangle-down div {
+        width: 0;
+        height: 0;
+        margin-left:-1000px; 
+        margin-top:-100px;
+    }
+}
+
+@keyframes heartBeat {
+    0% {
+      transform: scale(1);
+    }
+  
+    14% {
+      transform: scale(1.2);
+    }
+  
+    28% {
+      transform: scale(1);
+    }
+  
+    42% {
+      transform: scale(1.2);
+    }
+  
+    70% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes pulse {
+      0% {
+          transform: scale(1.4) translateY(+300%);
+      }
+      50% {
+          transform: scale(1) translateY(+300%);
+      }
+      100% {
+
+      }
+  }
+
+  @keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes slideInDown {
+    from {
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+      visibility: visible;
+    }
+  
+    to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 100%, 0);
+      transform: translate3d(0, 100%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  @keyframes headShake {
+    0% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  
+    6.5% {
+      -webkit-transform: translateX(-6px) rotateY(-9deg);
+      transform: translateX(-6px) rotateY(-9deg);
+    }
+  
+    18.5% {
+      -webkit-transform: translateX(5px) rotateY(7deg);
+      transform: translateX(5px) rotateY(7deg);
+    }
+  
+    31.5% {
+      -webkit-transform: translateX(-3px) rotateY(-5deg);
+      transform: translateX(-3px) rotateY(-5deg);
+    }
+  
+    43.5% {
+      -webkit-transform: translateX(2px) rotateY(3deg);
+      transform: translateX(2px) rotateY(3deg);
+    }
+  
+    50% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes flipInX {
+    from {
+      -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+      transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+      opacity: 0;
+    }
+  
+    40% {
+      -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+      transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+  
+    60% {
+      -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+      transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+      opacity: 1;
+    }
+  
+    80% {
+      -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+      transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    }
+  
+    to {
+      -webkit-transform: perspective(400px);
+      transform: perspective(400px);
+    }
+  }

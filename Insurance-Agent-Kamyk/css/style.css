@@ -1,0 +1,104 @@
+body {
+    min-height: 500vh;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+svg {
+    display: inline-block;
+    position: fixed; /* make sure it stays put so we can see it! */
+    animation: rotate 1s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+  }
+
+  #car {
+    width: 100px;
+    position: fixed;
+    top: 75px;
+    right: 50%;
+    z-index: 0;
+    animation: slide 1s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+  }
+
+  #home {
+    position: fixed;
+    top: 50px;
+    right: 50%;
+    z-index: -1;
+    transform: translateX(50%);
+    backface-visibility: visible !important;
+    animation-name: flipInX;
+    animation-duration: .5s;
+  }
+
+  #house {
+    /* opacity: 0;
+    animation: fadeOut 1s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s); */
+  }
+
+  #garage, #house, #tree, #sec-tree {
+      width: 100px;
+  }
+  
+  @keyframes rotate {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes fadeOut {
+
+      95% {
+          opacity: 1;
+      }
+
+      100% {
+          opacity: 0;
+      }
+  }
+
+  @keyframes slide {
+      from {
+          transform: translateX(-50vw);
+      }
+  }
+
+  @keyframes flipInX {
+    from {
+      -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+      transform: perspective(400px) rotate3d(1, 0, 0, 90deg) translateX(50%);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+      opacity: 0;
+    }
+  
+    40% {
+      -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+      transform: perspective(400px) rotate3d(1, 0, 0, -20deg) translateX(50%);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+  
+    60% {
+      -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+      transform: perspective(400px) rotate3d(1, 0, 0, 10deg) translateX(50%);
+      opacity: 1;
+    }
+  
+    80% {
+      -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+      transform: perspective(400px) rotate3d(1, 0, 0, -5deg) translateX(50%);
+    }
+  
+    to {
+      -webkit-transform: perspective(400px);
+      transform: perspective(400px) translateX(50%);
+    }
+  }

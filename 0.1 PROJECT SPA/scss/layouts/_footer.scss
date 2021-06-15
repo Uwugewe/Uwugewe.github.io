@@ -1,0 +1,110 @@
+.footer {
+    padding-bottom: 10%;
+    background-color: $primary-color;
+    margin-top: 15%;
+    h1, p, span{
+        color: #fff;
+    }
+    .footer-contact {
+        // padding: 0 15%;
+        @include flexbox;
+        @include upper;
+        flex-direction: column;
+        .footer-item {
+            margin-bottom: 10%;
+            @include flexbox;
+            justify-content: space-evenly;
+            img {
+                height: 30px;
+            }
+        }
+        input {
+            background-color: $primary-color;
+            border: 1px solid lightgray;
+            padding: 10px;
+            margin-top: 5%;
+            font-weight: lighter;
+            width: 100%;
+            &::placeholder {
+                color: #fff;
+            }
+        }
+        button {
+            @include upper;
+            padding: 5px 20px;
+            border-radius: 30px;
+            color: black;
+            align-self: center;
+            margin-top: 10%;
+        }
+    }
+}
+.links {
+    @include flexbox;
+    padding: 15% 0;
+    background-color: #fff;
+    flex-direction: column;
+    align-items: center;
+    img {
+        width: 100px;
+    }
+    form {
+        @include flexbox;
+        flex-wrap: wrap;
+        margin-top: 5%;
+        justify-content: center;
+        a {
+            width: 33%;
+            @include upper;
+            text-decoration: none;
+            color: $secondary-text-color;
+        }
+    }
+}
+@media all and (min-width: $extra-large) {
+    .footer {
+        margin-top: 7%;
+        padding: 5% 20%;
+        .section-header {
+            padding: 0;
+        }
+        .footer-contact {
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            .items-wrapper {
+                width: 30%;
+                @include flexbox;
+                flex-direction: column;
+                justify-content: center;
+                .footer-item {
+                    width: 100%;
+                    justify-content: space-between;
+                    margin-bottom: 40px;
+                }
+            }
+        }
+        .inputs-wrapper {
+            width: 60%;
+            @include flexbox;
+            flex-direction: column;
+            justify-content: center;
+            input {
+                margin-top: 40px;
+            }
+            button {
+                align-self: flex-start;
+            }
+        }
+    }
+    .links {
+        padding: 5% 20%;
+        form {
+            width: 60%;
+            justify-content: space-between;
+            a{
+                width: auto;
+            }
+        }
+    }
+}
