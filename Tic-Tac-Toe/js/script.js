@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-document.querySelectorAll('div').forEach(div => {
-    let newElement = document.createElement('img');
-    newElement.setAttribute('src','img/X.png');
-    
-    div.addEventListener('click', (e) => {
-        e.target.classList.toggle('checked');
-        e.target.appendChild(newElement);
-    })
-})
-=======
 let header = document.querySelector('.header');
 let gameSection = document.querySelector('.game-section');
 let gameDivs = gameSection.querySelectorAll('div');
@@ -149,4 +138,3 @@ const checkingWinner = (figure) => {
         return
     }
 }
->>>>>>> e311e39119fa152f1f7b8125503e8062c97847e8

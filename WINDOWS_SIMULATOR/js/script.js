@@ -29,10 +29,6 @@ errorMessage.forEach( (e) => {
 
         }
         let imagesOnPage = document.querySelectorAll('img');
-<<<<<<< HEAD
-        console.log(imagesOnPage.length);
-=======
->>>>>>> e311e39119fa152f1f7b8125503e8062c97847e8
 
         if(imagesOnPage.length == 350) {
 
@@ -44,10 +40,6 @@ errorMessage.forEach( (e) => {
                     startup.src=`img/${e}`;
                     target.style.visibility = 'visible';
                     if (i == 2) {
-<<<<<<< HEAD
-                        console.log('welcome');
-=======
->>>>>>> e311e39119fa152f1f7b8125503e8062c97847e8
                         setTimeout( () => {
                             startup.style.display='none';
                         },2000)
