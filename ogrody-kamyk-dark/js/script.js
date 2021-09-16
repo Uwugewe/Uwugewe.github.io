@@ -1,12 +1,12 @@
 const setLogoVersion = () => {
     if(window.innerWidth > 768) {
         let logo = document.querySelector('.logo');
-        logo.setAttribute('src','../ogrody-kamyk-dark/img/logo-desktop.png');
+        logo.setAttribute('src','../img/logo-desktop.png');
     }
 }
 
-const slideShow = () => {
-    let slidesImg = document.getElementById('slider');
+const slideShowHeader = () => {
+    let slidesImg = document.getElementById('header-slider');
     let imgNo = 1;
 
     if(window.innerWidth < 768) {
@@ -14,7 +14,7 @@ const slideShow = () => {
             slidesImg.className += 'fadeOut';
             setTimeout(() => {
                 imgNo++;
-                slidesImg.setAttribute('src',`../ogrody-kamyk-dark/img/header-img${imgNo}.jpeg`);
+                slidesImg.setAttribute('src',`../img/header-img${imgNo}.jpeg`);
                 slidesImg.className = '';
     
                 if(imgNo === 4) {
@@ -83,5 +83,5 @@ const doSmthOnViewport = () => {
 
 setLogoVersion();
 mobileMenu();
-slideShow();
+slideShowHeader();
 doSmthOnViewport();

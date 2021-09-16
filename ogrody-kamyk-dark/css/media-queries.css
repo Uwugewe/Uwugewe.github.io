@@ -4,7 +4,7 @@
         display: block;
         position: fixed;
         background-color: lightgray;
-        z-index: 999;
+        z-index: 3;
         padding: 20px;
         left: 0;
         top: 80%;
@@ -33,7 +33,7 @@
 
     .header-container {
         position: relative;
-        background-color: rgba(0, 0, 0, .55);
+        background-color: rgba(0, 0, 0, .7);
     }
 
     .main-nav {
@@ -77,12 +77,31 @@
 
     .main-nav .mobile-holder .mobile-items a {
         color: #fff;
+        position: relative;
     }
 
-    .main-nav .mobile-holder .mobile-items a:hover {
+    /* .main-nav .mobile-holder .mobile-items a:hover {
         animation-name: headShake;
         animation-duration: .4s;
         animation-timing-function: ease-in-out;
+    } */
+
+    .mobile-holder .mobile-items a:after {    
+      background: none repeat scroll 0 0 transparent;
+      bottom: 0;
+      content: "";
+      display: block;
+      height: 1px;
+      left: 50%;
+      position: absolute;
+      background: #fff;
+      transition: width 0.3s ease 0s, left 0.3s ease 0s;
+      width: 0;
+    }
+
+    .mobile-holder .mobile-items a:hover:after { 
+      width: 100%; 
+      left: 0; 
     }
 
     .header-container #myVideo {
@@ -102,7 +121,7 @@
         height: 80vh;
     }
 
-    .header-container header #slider {
+    .header-container header #header-slider {
         height: 100%;
         display: none;
     }
@@ -185,15 +204,52 @@
         transform: scale(0.1, 1);
       }
 
+    /* BUTTON */
+
     #check-offer-btn {
-        background-color: #fff;
-        padding: 15px 25px;
-        border: none;
-        border-radius: 25px;
         margin: 20px 0;
+        background:#1aab80;
+        color:#fff;
+        border:none;
+        position:relative;
+        height:60px;
+        font-size:1.1em;
+        padding:0 2em;
+        cursor:pointer;
+        transition:800ms ease all;
+        outline:none;
     }
 
-     /* BUTON */
+    #check-offer-btn:hover {
+      cursor: pointer;
+      background:#fff;
+      color:#1AAB8A;
+    }
+
+    #check-offer-btn:before,#check-offer-btn:after{
+      content:'';
+      position:absolute;
+      top:0;
+      right:0;
+      height:2px;
+      width:0;
+      background: #1AAB8A;
+      transition:400ms ease all;
+    }
+
+    #check-offer-btn:after{
+      right:inherit;
+      top:inherit;
+      left:0;
+      bottom:0;
+    }
+
+    #check-offer-btn:hover:before,#check-offer-btn:hover:after{
+      width:100%;
+      transition:800ms ease all;
+    }
+
+     /* BUTTON */
 
     .header-container header .welcome-message .logo-in-startup {
         display: none;
