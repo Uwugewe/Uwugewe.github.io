@@ -1,0 +1,307 @@
+body {
+  margin: 0;
+  font-family: 'Quicksand', serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header,
+section {
+  padding: 1rem 2rem;
+  opacity: 0;
+}
+
+footer {
+  padding: 0.5rem 1rem;
+}
+
+hr {
+  margin: 0;
+  width: 80%;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.column--center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.row--nowrap {
+  flex-wrap: nowrap;
+}
+
+.row--flex-reverse {
+  flex-direction: row-reverse;
+}
+
+.content--space-between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.content--center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.text--bigger {
+  font-size: 36px;
+}
+
+.text--biggest {
+  font-size: 40px;
+}
+
+.text--white {
+  color: #fff;
+}
+
+.text--center {
+  text-align: center;
+}
+
+.text--right {
+  text-align: right;
+}
+
+.text--light {
+  font-weight: 300;
+}
+
+.text--letter-spacing {
+  letter-spacing: 0.3rem;
+}
+
+.text--letter-spacing-large {
+  letter-spacing: 1.5rem;
+}
+
+.width--10 {
+  width: 100%;
+}
+
+.width--7 {
+  width: 70%;
+}
+
+.width--6 {
+  width: 60%;
+}
+
+.width--5 {
+  width: 50%;
+}
+
+.width--4 {
+  width: 40%;
+}
+
+.width--3 {
+  width: 30%;
+}
+
+.max-width--10 {
+  max-width: 100%;
+}
+
+.max-width--7 {
+  max-width: 70%;
+}
+
+.max-width--6 {
+  max-width: 60%;
+}
+
+.max-width--5 {
+  max-width: 50%;
+}
+
+.max-width--4 {
+  max-width: 40%;
+}
+
+.max-width--3 {
+  max-width: 30%;
+}
+
+.padding {
+  padding: 1rem;
+}
+
+.margin-top--1 {
+  margin-top: 1rem;
+}
+
+.margin-bottom--0 {
+  margin-bottom: 0;
+}
+
+.text--sign {
+  font-family: 'Zeyada', serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bg--orange-to-white {
+  background: rgb(255, 245, 226);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 245, 226, 1) 0%,
+    rgba(255, 147, 0, 1) 63%,
+    rgba(255, 147, 0, 1) 100%
+  );
+}
+
+.bg--white-to-orange {
+  background: rgb(255, 245, 226);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 245, 226, 1) 0%,
+    rgba(255, 147, 0, 1) 63%,
+    rgba(255, 147, 0, 1) 100%
+  );
+}
+
+.bg--black {
+  background: #000;
+}
+
+@media screen and (max-width: 1050px) {
+  .text--bigger {
+    font-size: 30px;
+  }
+
+  .text--biggest {
+    font-size: 34px;
+  }
+
+  .text--letter-spacing {
+    letter-spacing: 0.3rem;
+  }
+
+  .text--letter-spacing-large {
+    letter-spacing: 1rem;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .text--bigger {
+    font-size: 24px;
+  }
+
+  .text--biggest {
+    font-size: 30px;
+  }
+
+  .text--letter-spacing {
+    letter-spacing: 0.3rem;
+  }
+
+  .text--letter-spacing-large {
+    letter-spacing: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .text--bigger {
+    font-size: 18px;
+  }
+
+  .text--biggest {
+    font-size: 24px;
+  }
+
+  .text--letter-spacing {
+    letter-spacing: 0.3rem;
+  }
+
+  .text--letter-spacing-large {
+    letter-spacing: 0.3rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header,
+  section {
+    padding: 10px;
+  }
+
+  .text--letter-spacing {
+    letter-spacing: normal;
+  }
+
+  .text--letter-spacing-large {
+    letter-spacing: normal;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  header,
+  section {
+    padding: 10px;
+  }
+
+  header div {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  header img {
+    width: 90% !important;
+  }
+
+  section {
+    flex-direction: column !important;
+  }
+
+  section div {
+    max-width: 100% !important;
+    width: max-content;
+    display: flex;
+    flex-direction: column !important;
+  }
+
+  section div p {
+    width: auto !important;
+    text-align: center;
+  }
+
+  section img {
+    width: 70% !important;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 2s;
+}
+
+.opacity--1 {
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
