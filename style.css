@@ -94,6 +94,10 @@ hr {
   letter-spacing: 1.5rem;
 }
 
+.text--break {
+  word-break: break-word;
+}
+
 .width--10 {
   width: 100%;
 }
@@ -290,6 +294,10 @@ hr {
 
   section img {
     width: 70% !important;
+  }
+
+  .text--biggest {
+    font-size: 18px !important;
   }
 }
 
