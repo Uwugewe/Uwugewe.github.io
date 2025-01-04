@@ -279,6 +279,10 @@ hr {
     flex-direction: column !important;
   }
 
+  section h1 {
+    text-align: center
+  }
+
   section div p {
     width: auto !important;
     text-align: center;

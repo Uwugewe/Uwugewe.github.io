@@ -24,7 +24,7 @@ class Animations {
     });
   }
 
-  callAnimations = () => {
+  init = () => {
     this.events.forEach(eventToLoad => {
       window.addEventListener(eventToLoad, () => {
         this.animate();
