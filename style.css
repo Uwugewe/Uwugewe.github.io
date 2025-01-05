@@ -283,7 +283,7 @@ hr {
     flex-direction: column !important;
   }
 
-  section h1 {
+  section h1, section h2 {
     text-align: center
   }
 
