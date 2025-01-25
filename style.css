@@ -54,12 +54,13 @@ hr {
 
 .row--flex-reverse {
   flex-direction: row-reverse;
+  justify-content: center;
 }
 
 .content--space-between {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -67,6 +68,7 @@ hr {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
 }
 
 .text--bigger {
@@ -118,7 +120,11 @@ hr {
 }
 
 .width--10 {
-  width: 100%;
+  width: 100% !important;
+}
+
+.width--8 {
+  width: 80%;
 }
 
 .width--7 {
@@ -139,6 +145,10 @@ hr {
 
 .width--3 {
   width: 30%;
+}
+
+.height--10 { 
+  height: 100%;
 }
 
 .max-width--10 {
@@ -174,7 +184,7 @@ hr {
 }
 
 .margin--05 {
-  margin: .5rem
+  margin: 0.5rem;
 }
 
 .margin-top--1 {
@@ -227,7 +237,32 @@ hr {
   background: #000;
 }
 
-@media screen and (max-width: 1050px) {
+.bg--blured {
+  background: rgba(255,255,255,.3);
+}
+
+.absolute {
+  position: absolute;
+}
+
+.click-to-copy {
+  cursor: pointer;
+  position: relative;
+}
+
+.click-to-copy:hover {
+  transform: scale(1.01);
+  filter: blur(3px);
+  -webkit-filter: brightness(100%);
+  transition: all 0.1s ease-in;
+}
+
+.click-to-copy:hover .click-to-copy-message {
+  transform: scale(1.1);
+  transition: all 0.2s ease-in;
+}
+
+@media screen and (max-width: 1350px) {
   .text--bigger {
     font-size: 30px;
   }
@@ -243,9 +278,13 @@ hr {
   .text--letter-spacing-large {
     letter-spacing: 1rem;
   }
+
+  .padding--4 {
+    padding: 4rem 1rem;
+  }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1150px) {
   .text--bigger {
     font-size: 24px;
   }
@@ -254,16 +293,12 @@ hr {
     font-size: 30px;
   }
 
-  .text--letter-spacing {
-    letter-spacing: 0.3rem;
-  }
-
   .text--letter-spacing-large {
     letter-spacing: 0.7rem;
   }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1000px) {
   .text--bigger {
     font-size: 18px;
   }
@@ -272,16 +307,12 @@ hr {
     font-size: 24px;
   }
 
-  .text--letter-spacing {
-    letter-spacing: 0.3rem;
-  }
-
   .text--letter-spacing-large {
     letter-spacing: 0.3rem;
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 800px) {
   header,
   section {
     padding: 10px;
@@ -296,7 +327,7 @@ hr {
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 700px) {
   header,
   section {
     padding: 10px;
@@ -317,7 +348,7 @@ hr {
 
   section div {
     max-width: 100% !important;
-    width: max-content;
+    width: max-content !important;
     display: flex;
     flex-direction: column !important;
   }
@@ -346,7 +377,7 @@ hr {
 }
 
 .opacity--1 {
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 @keyframes fadeIn {
