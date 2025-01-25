@@ -16,6 +16,12 @@ footer {
   padding: 0.5rem 1rem;
 }
 
+section h2 {
+  background: rgb(255, 187, 93);
+  border-radius: 20px;
+  padding: 2px 15px;
+}
+
 hr {
   margin: 0 auto;
   width: 80%;
@@ -53,7 +59,8 @@ hr {
 .content--space-between {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .content--center {
@@ -63,7 +70,7 @@ hr {
 }
 
 .text--bigger {
-  font-size: 36px;
+  font-size: 32px;
 }
 
 .text--biggest {
@@ -91,11 +98,23 @@ hr {
 }
 
 .text--letter-spacing-large {
-  letter-spacing: 1.5rem;
+  letter-spacing: 1.2rem;
+}
+
+.line-height--15 {
+  line-height: 1.5;
 }
 
 .text--break {
   word-break: break-word;
+}
+
+.border-linear {
+  border: 1px solid #000;
+}
+
+.border-circled {
+  border-radius: 20px;
 }
 
 .width--10 {
@@ -150,12 +169,32 @@ hr {
   padding: 1rem;
 }
 
+.padding--4 {
+  padding: 4rem;
+}
+
+.margin--05 {
+  margin: .5rem
+}
+
 .margin-top--1 {
   margin-top: 1rem;
 }
 
+.margin-top--2 {
+  margin-top: 2rem;
+}
+
 .margin-bottom--0 {
   margin-bottom: 0;
+}
+
+.margin-bottom--1 {
+  margin-bottom: 1rem;
+}
+
+.margin-bottom--2 {
+  margin-bottom: 2rem;
 }
 
 .text--sign {
@@ -168,9 +207,9 @@ hr {
   background: rgb(255, 245, 226);
   background: linear-gradient(
     0deg,
-    rgba(255, 245, 226, 1) 0%,
-    rgba(255, 147, 0, 1) 63%,
-    rgba(255, 147, 0, 1) 100%
+    rgba(255, 245, 226, 1) 7%,
+    rgba(255, 147, 0, 0.7) 63%,
+    rgba(255, 147, 0, 0.9) 100%
   );
 }
 
@@ -178,9 +217,9 @@ hr {
   background: rgb(255, 245, 226);
   background: linear-gradient(
     180deg,
-    rgba(255, 245, 226, 1) 0%,
-    rgba(255, 147, 0, 1) 63%,
-    rgba(255, 147, 0, 1) 100%
+    rgba(255, 245, 226, 1) 7%,
+    rgba(255, 147, 0, 0.7) 63%,
+    rgba(255, 147, 0, 0.9) 100%
   );
 }
 
@@ -283,8 +322,9 @@ hr {
     flex-direction: column !important;
   }
 
-  section h1, section h2 {
-    text-align: center
+  section h1,
+  section h2 {
+    text-align: center;
   }
 
   section div p {
