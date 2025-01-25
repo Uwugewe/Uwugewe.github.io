@@ -12,7 +12,8 @@ class Messages {
     "font-weight": "500",
     "justify-content": "center",
     "align-items": "center",
-    "border-radius": "7px"
+    "border-radius": "7px",
+    "animation": "fadeInDown .5s",
   };
 
   createNotification(message) {
@@ -21,13 +22,18 @@ class Messages {
     for (let [key, value] of Object.entries(this.styles)) {
       div.style[key] = value;
     }
-
     div.innerText = message;
-
     document.querySelector('body').appendChild(div);
     setTimeout(() => {
-      div.remove();
+      this.removeNotification(div);
     }, 3000);
+  };
+
+  removeNotification(div) {
+    div.style.animation = "fadeInUp .5s";
+    setTimeout(() => {
+      div.remove();
+    }, 500);
   };
 
   handle = (message) => {
