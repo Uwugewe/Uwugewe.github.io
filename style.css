@@ -147,7 +147,11 @@ hr {
   width: 30%;
 }
 
-.height--10 { 
+.width--340px {
+  width: 340px !important;
+}
+
+.height--10 {
   height: 100%;
 }
 
@@ -238,7 +242,7 @@ hr {
 }
 
 .bg--blured {
-  background: rgba(255,255,255,.5);
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .absolute {
@@ -258,6 +262,27 @@ hr {
 .click-to-copy:hover .click-to-copy-message {
   transform: scale(1.05);
   transition: all 0.2s ease-in;
+}
+
+.fb-widget-container {
+  width: 0%;
+  position: fixed;
+  right: 0;
+  top: 25%;
+  z-index: 2;
+  transition: width .3s ease-in;
+}
+
+.fb-widget-container .facebook-button {
+  position: absolute;
+  top: 0;
+  right: 100%;
+  z-index: 3;
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+  border: none;
+  background: none;
 }
 
 @media screen and (max-width: 1350px) {
