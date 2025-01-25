@@ -348,6 +348,10 @@ hr {
   .text--letter-spacing-large {
     letter-spacing: normal;
   }
+
+  .fb-widget-container .facebook-button {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 700px) {
