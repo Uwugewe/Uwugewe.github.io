@@ -8,8 +8,8 @@ class Animations {
 
   animate = () => {
     this.sections.forEach(tag => {
-      const section = document.querySelectorAll(tag);
-      section.forEach(section => {
+      const sections = document.querySelectorAll(tag);
+      sections.forEach(section => {
         const coordinates = section.getBoundingClientRect();
         if (coordinates.top >= 0 &&
           coordinates.left >= 0 &&
