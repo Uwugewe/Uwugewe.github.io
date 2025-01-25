@@ -238,7 +238,7 @@ hr {
 }
 
 .bg--blured {
-  background: rgba(255,255,255,.3);
+  background: rgba(255,255,255,.5);
 }
 
 .absolute {
@@ -252,8 +252,6 @@ hr {
 
 .click-to-copy:hover {
   transform: scale(1.01);
-  filter: blur(3px);
-  -webkit-filter: brightness(100%);
   transition: all 0.1s ease-in;
 }
 
