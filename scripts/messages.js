@@ -21,8 +21,12 @@ class Messages {
     "animation": "fadeInDown .5s",
   };
 
-  createNotification(message) {
+  createNotification(message, id) {
+    const notification = document.querySelector(`#${id}`);
+    if(notification) return;
+
     const div = document.createElement("div");
+    div.id = id;
 
     this.styles.addMany(div, this.stylesProperties);
     div.innerText = message;

@@ -13,7 +13,7 @@ class Copy {
     source.addEventListener(property.event, () => {
       const text = target.outerText;
       navigator.clipboard.writeText(text);
-      this.messages.createNotification("Skopiowano do schowka!");
+      this.messages.createNotification("Skopiowano do schowka!", "copy");
     });
   };
 
