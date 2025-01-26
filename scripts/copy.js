@@ -1,10 +1,10 @@
 class Copy {
-  constructor(properties, handleMessage = null) {
+  constructor(properties) {
     this.properties = properties;
-    this.handleMessage = handleMessage;
+    this.messages = new Messages;
   }
   properties = [];
-  handleMessage = null;
+  messages = null;
 
   copy = (property) => {
     const source = document.querySelector(property.source);
@@ -13,7 +13,7 @@ class Copy {
     source.addEventListener(property.event, () => {
       const text = target.outerText;
       navigator.clipboard.writeText(text);
-      handleMessage("Skopiowano do schowka!");
+      this.messages.createNotification("Skopiowano do schowka!");
     });
   };
 

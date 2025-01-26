@@ -1,5 +1,10 @@
 class Messages {
-  styles = {
+  constructor(){
+    this.styles = new Styles;
+  }
+  styles = null;
+
+  stylesProperties = {
     width: "300px",
     height: "50px",
     background: "#393939",
@@ -19,9 +24,7 @@ class Messages {
   createNotification(message) {
     const div = document.createElement("div");
 
-    for (let [key, value] of Object.entries(this.styles)) {
-      div.style[key] = value;
-    }
+    this.styles.addMany(div, this.stylesProperties);
     div.innerText = message;
     document.querySelector('body').appendChild(div);
     setTimeout(() => {
@@ -33,7 +36,7 @@ class Messages {
     div.style.animation = "fadeInUp .5s";
     setTimeout(() => {
       div.remove();
-    }, 500);
+    }, 450);
   };
 
   handle = (message) => {

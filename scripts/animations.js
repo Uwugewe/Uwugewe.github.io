@@ -1,32 +1,56 @@
 class Animations {
-  constructor(events, sections) {
-    this.events = events;
-    this.sections = sections;
+  constructor(properties) {
+    this.properties = properties;
+    this.classes = new Classes;
+    this.styles = new Styles;
   }
-  events = [];
-  sections = [];
 
-  animate = () => {
-    this.sections.forEach(tag => {
-      const sections = document.querySelectorAll(tag);
-      sections.forEach(section => {
-        const coordinates = section.getBoundingClientRect();
+  properties = [];
+  classes = null;
+
+  once = (property) => {
+    window.addEventListener(property.event, () => {
+      const targets = document.querySelectorAll(property.target);
+      targets.forEach(target => {
+        const coordinates = target.getBoundingClientRect();
         if (coordinates.top >= 0 &&
-          coordinates.top + (window.innerHeight / 4) <= (window.innerHeight || document.documentElement.clientHeight)){
-          section.classList.add('fade-in');
+          coordinates.top + (window.innerHeight / 4) <= (window.innerHeight || document.documentElement.clientHeight)) {
+          const end = (property.duration * 1000) - 500;
+          this.styles.add(target, "animation", `${property.animation} ${property.duration}s`);
           setTimeout(() => {
-            section.classList.add('opacity--1');
-          }, 1500);
+            this.classes.add(target, 'opacity--1');
+          }, end);
         }
       });
     });
-  }
+  };
+
+  many = (property) => {
+    const targets = document.querySelectorAll(property.target);
+    targets.forEach(target => {
+      target.addEventListener('click', () => {
+        const end = (property.duration * 1000);
+        this.styles.add(target, "animation", `${property.animation} ${property.duration}s`);
+        setTimeout(() => {
+          this.styles.remove(target, "animation");
+        }, end);
+      });
+    });
+  };
 
   init = () => {
-    this.events.forEach(eventToLoad => {
-      window.addEventListener(eventToLoad, () => {
-        this.animate();
-      })
+    this.properties.forEach(property => {
+      switch (property.event) {
+        case 'click':
+          this.many(property);
+          break;
+        case 'scroll':
+          this.once(property);
+          break;
+        case 'load':
+          this.once(property);
+          break;
+      }
     });
   }
 }
