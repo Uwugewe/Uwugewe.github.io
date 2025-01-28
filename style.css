@@ -545,6 +545,10 @@ textarea:focus {
   .text--biggest {
     font-size: 18px !important;
   }
+
+  .drops {
+    display: none;
+  }
 }
 
 .opacity--1 {
