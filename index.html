@@ -50,8 +50,8 @@
     <div class="bg--white-to-orange">
       <section class="column--center padding--4">
         <h2 class="text--letter-spacing-large text--biggest">JAK PRACUJEMY?</h2>
-        <div class="content--center row--nowrap margin-top--1">
-          <img src="images/building.webp" alt="budynek" class="width--3" />
+        <div class="content--center row--nowrap margin-top--1 mobile--column">
+          <img src="images/building.webp" alt="budynek" class="width--3 mobile-width--7" />
           <div class="text--center max-width--4">
             <h3 class="text--letter-spacing-large text--biggest">MODEL 3D</h3>
             <p class="text--bigger line-height--15">
@@ -64,8 +64,8 @@
     </div>
     <div class="bg--orange-to-white">
       <section class="row row--flex-reverse row--nowrap padding--4">
-        <img src="images/math.webp" alt="obliczenia" class="width--3" />
-        <div class="width--4 padding text--center">
+        <img src="images/math.webp" alt="obliczenia" class="width--3 mobile-width--7" />
+        <div class="width--4 padding text--center mobile--column">
           <h3 class="text--letter-spacing-large text--biggest margin-bottom--0">
             OBLICZENIA
           </h3>
@@ -81,9 +81,9 @@
         <img
           src="images/cert.webp"
           alt="świadectwo energetyczne"
-          class="width--3"
+          class="width--3 mobile-width--7"
         />
-        <div class="width--4 padding text--center">
+        <div class="width--4 padding text--center mobile--column">
           <h3 class="text--letter-spacing-large text--biggest">REZULTATY</h3>
           <p class="text--bigger line-height--15">
             Wystawiamy świadectwo charakterystyki energetycznej zgodne z
@@ -98,9 +98,9 @@
         <h2 class="text--letter-spacing-large text--biggest">
           CZEGO WYMAGAMY?
         </h2>
-        <div class="content--center row--nowrap margin-top--1">
-          <img src="images/scheme.webp" alt="budynek" class="width--3" />
-          <div class="text--center max-width--4">
+        <div class="content--center row--nowrap margin-top--1 mobile--column">
+          <img src="images/scheme.webp" alt="budynek" class="width--3 mobile-width--7" />
+          <div class="text--center max-width--4 mobile--column">
             <h3 class="text--letter-spacing-large text--biggest">
               RZUT I PRZEKRÓJ
             </h3>
@@ -114,8 +114,8 @@
     </div>
     <div class="bg--white-to-orange">
       <section class="row row--flex-reverse row--nowrap padding--4">
-        <img src="images/idk.webp" alt="obliczenia" class="width--3" />
-        <div class="width--4 padding text--center">
+        <img src="images/idk.webp" alt="obliczenia" class="width--3 mobile-width--7" />
+        <div class="width--4 padding text--center mobile--column">
           <h3 class="text--letter-spacing-large text--biggest margin-bottom--0">
             PRZEGRODY
           </h3>
@@ -129,9 +129,9 @@
     </div>
     <div class="bg--orange-to-white">
       <section class="column--center padding--4">
-        <div class="content--center row--nowrap">
-          <img src="images/furnace.webp" alt="budynek" class="width--3" />
-          <div class="text--center max-width--4">
+        <div class="content--center row--nowrap mobile--column">
+          <img src="images/furnace.webp" alt="budynek" class="width--3 mobile-width--7" />
+          <div class="text--center max-width--4 mobile--column">
             <h3 class="text--letter-spacing-large text--biggest">
               OGRZEWANIE I CWU
             </h3>
@@ -145,8 +145,8 @@
     </div>
     <div class="bg--white-to-orange">
       <section class="row row--flex-reverse row--nowrap padding--4">
-        <img src="images/shape.webp" alt="obliczenia" class="width--3" />
-        <div class="width--3 padding text--center">
+        <img src="images/shape.webp" alt="obliczenia" class="width--3 mobile-width--7" />
+        <div class="width--3 padding text--center mobile--column">
           <h3 class="text--letter-spacing-large text--biggest margin-bottom--0">
             INFORMACJE DODATKOWE
           </h3>
@@ -157,71 +157,86 @@
         </div>
       </section>
     </div>
-    <div class="bg--orange-to-white">
-      <section class="column--center row--nowrap padding--4">
-        <h2
-          class="text--center text--letter-spacing-large text--biggest margin-bottom--0 width--7"
-        >
-          Wiadomość do zarządcy Twojej nieruchomości
-        </h2>
-        <div
-          class="width--7 border-linear border-circled margin-top--2 margin-bottom--2 click-to-copy"
-        >
+    <div class="mobile-padding--1">
+      <div class="bg--orange-to-white">
+        <section class="column--center row--nowrap padding--4">
+          <h2
+            class="text--center text--letter-spacing-large text--biggest margin-bottom--0 width--7"
+          >
+            Wiadomość do zarządcy Twojej nieruchomości
+          </h2>
           <div
-            class="content--center width--10 height--10 absolute border-circled bg--blured-on-hover"
+            class="width--7 border-linear border-circled margin-top--2 margin-bottom--2 click-to-copy"
           >
-            <span class="click-to-copy-message text--center text--biggest"
-              ><b>Kliknij aby wyświetlić!</b></span
+            <div
+              class="content--center width--10 height--10 absolute border-circled bg--blured-on-hover"
             >
+              <span class="click-to-copy-message text--center text--biggest"
+                ><b>Kliknij aby wyświetlić!</b></span
+              >
+            </div>
+            <div class="click-to-copy-target">
+              <h4 class="margin--05">
+                Temat: Prośba o dane do świadectwa charakterystyki energetycznej
+              </h4>
+              <p class="margin--05">
+                Szanowni Państwo,<br />Zwracam się z uprzejmą prośbą o
+                udostępnienie danych dotyczących nieruchomości (Adres
+                nieruchomości), które są niezbędne do sporządzenia świadectwa
+                charakterystyki energetycznej. Proszę o podanie następujących
+                informacji:
+              </p>
+            </div>
           </div>
-          <div class="click-to-copy-target">
-            <h4 class="margin--05">
-              Temat: Prośba o dane do świadectwa charakterystyki energetycznej
-            </h4>
-            <p class="margin--05">
-              Szanowni Państwo,<br />Zwracam się z uprzejmą prośbą o
-              udostępnienie danych dotyczących nieruchomości (Adres
-              nieruchomości), które są niezbędne do sporządzenia świadectwa
-              charakterystyki energetycznej. Proszę o podanie następujących
-              informacji:
-            </p>
-          </div>
-        </div>
-      </section>
-    </div>
-    <div class="bg--white-to-orange">
-      <section class="column--center row--nowrap padding--4">
-        <h2
-          class="text--center text--letter-spacing-large text--biggest margin-bottom--3 width--7"
-        >
-          Skontaktuj się z nami
-        </h2>
-        <div class="margin-top--4 relative width--7 on_top">
-          <form
-            action="https://formsubmit.co/ea6a002cadd74ba50a816b7d95d47da3"
-            method="POST"
+        </section>
+      </div>
+      <div class="bg--white-to-orange">
+        <section class="column--center row--nowrap padding--4">
+          <h2
+            class="text--center text--letter-spacing-large text--biggest margin-bottom--0 width--7"
           >
-            <p>Napisz bezpośrednio do nas</p>
-            <input
-              class="width--7"
-              type="email"
-              name="email"
-              placeholder="email"
-              required
-            /><br />
-            <textarea
-              class="width--7"
-              placeholder="Napisz wiadomość"
-              name="message"
-              rows="10"
-              required
-            ></textarea
-            ><br />
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="submit" value="Wyślij" />
-          </form>
-        </div>
-      </section>
+            Skontaktuj się z nami
+          </h2>
+          <div class="row--nowrap content--space-between margin-top--2 width--6">
+            <img src="images/fb.png" alt="facebook logo" class="width--1" />
+            <h3>FACEBOOK</h3>
+          </div>
+          <div class="row row--nowrap">
+            <h3>+48 799-231-116</h3>
+          </div>
+          <div class="row row--nowrap">
+            <h3>LINKEDIN</h3>
+          </div>
+          <div class="row row--nowrap">
+            <h3>kiphit@gmail.com</h3>
+          </div>
+          <div class="relative width--7 margin-top--2 mobile-width--9">
+            <form
+              action="https://formsubmit.co/ea6a002cadd74ba50a816b7d95d47da3"
+              method="POST"
+            >
+              <p>Napisz bezpośrednio do nas</p>
+              <input
+                class="width--7"
+                type="email"
+                name="email"
+                placeholder="email"
+                required
+              /><br />
+              <textarea
+                class="width--7"
+                placeholder="Napisz wiadomość"
+                name="message"
+                rows="10"
+                required
+              ></textarea
+              ><br />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="submit" value="Wyślij" />
+            </form>
+          </div>
+        </section>
+      </div>
     </div>
     <div class="modal">
       <article class="modal-container">

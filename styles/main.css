@@ -147,6 +147,10 @@ hr {
   width: 30%;
 }
 
+.width--1 {
+  width: 15%;
+}
+
 .width--340px {
   width: 340px !important;
 }

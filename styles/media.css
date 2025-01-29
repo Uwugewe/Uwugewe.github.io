@@ -18,6 +18,10 @@
   .padding--4 {
     padding: 4rem 1rem;
   }
+
+  .modal .modal-container {
+    max-width: 65vw;
+  }
 }
 
 @media screen and (max-width: 1150px) {
@@ -46,6 +50,10 @@
   .text--letter-spacing-large {
     letter-spacing: 0.3rem;
   }
+
+  .modal .modal-container {
+    max-width: 85vw;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -64,6 +72,14 @@
 
   .fb-widget-container .facebook-button {
     display: none;
+  }
+
+  .modal .modal-container-title {
+    font-size: 1.2rem;
+  }
+
+  .mobile-padding--1 .padding--4 {
+    padding: 1rem;
   }
 }
 
@@ -86,11 +102,19 @@
     flex-direction: column !important;
   }
 
-  section div {
+  section .mobile--column {
     max-width: 100% !important;
     width: max-content !important;
     display: flex;
     flex-direction: column !important;
+  }
+
+  .mobile-width--7 {
+    width: 70%;
+  }
+
+  .mobile-width--9 {
+    width: 90%;
   }
 
   section h1,
@@ -103,11 +127,17 @@
     text-align: center;
   }
 
-  section img {
+  /* section img {
     width: 70% !important;
-  }
+  } */
 
   .text--biggest {
     font-size: 18px !important;
+  }
+}
+
+@media screen and (max-width: 500) {
+  .modal-container-title svg {
+    display: none;
   }
 }
