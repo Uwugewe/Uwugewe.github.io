@@ -1,4 +1,4 @@
-class Widget {
+class Triggers {
   constructor(properties){
     this.properties = properties;
     this.classes = new Classes;
@@ -11,7 +11,7 @@ class Widget {
     const target = document.querySelector(property.target);
     if (!trigger || !target) return;
     trigger.addEventListener('click', () => {
-      this.classes.toggle(target, 'width--340px');
+      this.classes.toggle(target, property.class);
     });
 
   }

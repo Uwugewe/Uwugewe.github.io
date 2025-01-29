@@ -1,0 +1,113 @@
+@media screen and (max-width: 1350px) {
+  .text--bigger {
+    font-size: 30px;
+  }
+
+  .text--biggest {
+    font-size: 34px;
+  }
+
+  .text--letter-spacing {
+    letter-spacing: 0.3rem;
+  }
+
+  .text--letter-spacing-large {
+    letter-spacing: 1rem;
+  }
+
+  .padding--4 {
+    padding: 4rem 1rem;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .text--bigger {
+    font-size: 24px;
+  }
+
+  .text--biggest {
+    font-size: 30px;
+  }
+
+  .text--letter-spacing-large {
+    letter-spacing: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .text--bigger {
+    font-size: 18px;
+  }
+
+  .text--biggest {
+    font-size: 24px;
+  }
+
+  .text--letter-spacing-large {
+    letter-spacing: 0.3rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  header,
+  section {
+    padding: 10px;
+  }
+
+  .text--letter-spacing {
+    letter-spacing: normal;
+  }
+
+  .text--letter-spacing-large {
+    letter-spacing: normal;
+  }
+
+  .fb-widget-container .facebook-button {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  header,
+  section {
+    padding: 10px;
+  }
+
+  header div {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  header img {
+    width: 90% !important;
+  }
+
+  section {
+    flex-direction: column !important;
+  }
+
+  section div {
+    max-width: 100% !important;
+    width: max-content !important;
+    display: flex;
+    flex-direction: column !important;
+  }
+
+  section h1,
+  section h2 {
+    text-align: center;
+  }
+
+  section div p {
+    width: auto !important;
+    text-align: center;
+  }
+
+  section img {
+    width: 70% !important;
+  }
+
+  .text--biggest {
+    font-size: 18px !important;
+  }
+}

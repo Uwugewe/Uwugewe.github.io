@@ -1,0 +1,311 @@
+body {
+  margin: 0;
+  font-family: 'Quicksand', serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header,
+section {
+  padding: 1rem 2rem;
+  opacity: 0;
+}
+
+footer {
+  padding: 0.5rem 1rem;
+}
+
+section h2 {
+  background: rgb(255, 187, 93);
+  border-radius: 20px;
+  padding: 2px 15px;
+}
+
+hr {
+  margin: 0 auto;
+  width: 80%;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.column--center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.row--nowrap {
+  flex-wrap: nowrap;
+}
+
+.row--flex-reverse {
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+
+.content--space-between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content--center {
+  display: flex !important;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.text--bigger {
+  font-size: 32px;
+}
+
+.text--biggest {
+  font-size: 40px;
+}
+
+.text--white {
+  color: #fff;
+}
+
+.text--center {
+  text-align: center;
+}
+
+.text--right {
+  text-align: right;
+}
+
+.text--light {
+  font-weight: 300;
+}
+
+.text--letter-spacing {
+  letter-spacing: 0.3rem;
+}
+
+.text--letter-spacing-large {
+  letter-spacing: 1.2rem;
+}
+
+.line-height--15 {
+  line-height: 1.5;
+}
+
+.text--break {
+  word-break: break-word;
+}
+
+.border-linear {
+  border: 1px solid #b9b9b9;
+}
+
+.border-circled {
+  border-radius: 20px;
+}
+
+.width--10 {
+  width: 100% !important;
+}
+
+.width--8 {
+  width: 80%;
+}
+
+.width--7 {
+  width: 70%;
+}
+
+.width--6 {
+  width: 60%;
+}
+
+.width--5 {
+  width: 50%;
+}
+
+.width--4 {
+  width: 40%;
+}
+
+.width--3 {
+  width: 30%;
+}
+
+.width--340px {
+  width: 340px !important;
+}
+
+.height--10 {
+  height: 100%;
+}
+
+.max-width--10 {
+  max-width: 100%;
+}
+
+.max-width--7 {
+  max-width: 70%;
+}
+
+.max-width--6 {
+  max-width: 60%;
+}
+
+.max-width--5 {
+  max-width: 50%;
+}
+
+.max-width--4 {
+  max-width: 40%;
+}
+
+.max-width--3 {
+  max-width: 30%;
+}
+
+.padding {
+  padding: 1rem;
+}
+
+.padding--4 {
+  padding: 4rem;
+}
+
+.margin--05 {
+  margin: 0.5rem;
+}
+
+.margin-top--1 {
+  margin-top: 1rem;
+}
+
+.margin-top--2 {
+  margin-top: 2rem;
+}
+
+.margin-top--4 {
+  margin-top: 4rem;
+}
+
+.margin-bottom--0 {
+  margin-bottom: 0;
+}
+
+.margin-bottom--1 {
+  margin-bottom: 1rem;
+}
+
+.margin-bottom--2 {
+  margin-bottom: 2rem;
+}
+
+.margin-bottom--3 {
+  margin-bottom: 3rem;
+}
+
+.text--sign {
+  font-family: 'Zeyada', serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bg--orange-to-white {
+  background: rgb(255, 245, 226);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 245, 226, 1) 7%,
+    rgba(255, 147, 0, 0.7) 63%,
+    rgba(255, 147, 0, 0.9) 100%
+  );
+}
+
+.bg--white-to-orange {
+  background: rgb(255, 245, 226);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 245, 226, 1) 7%,
+    rgba(255, 147, 0, 0.7) 63%,
+    rgba(255, 147, 0, 0.9) 100%
+  );
+}
+
+.bg--black {
+  background: #000;
+}
+
+.bg--blured-on-hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.bg--blured-on-hover:hover {
+  backdrop-filter: blur(2px);
+  transition: all .2s ease;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.click-to-copy {
+  cursor: pointer;
+  position: relative;
+}
+
+.click-to-copy:hover {
+  transform: scale(1.01);
+  transition: all 0.1s ease-in-out;
+}
+
+.click-to-copy:hover .click-to-copy-message {
+  transform: scale(1.05);
+  transition: all 0.2s ease-in;
+}
+
+.fb-widget-container {
+  width: 0%;
+  position: fixed;
+  right: 0;
+  top: 25%;
+  z-index: 2;
+  transition: width 0.3s ease-in;
+}
+
+.fb-widget-container .facebook-button {
+  position: absolute;
+  top: 0;
+  right: 100%;
+  z-index: 3;
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+  border: none;
+  background: none;
+}
+
+.relative {
+  position: relative;
+}
+
+.on_top {
+  z-index: 10;
+}
+
+.opacity--1 {
+  opacity: 1 !important;
+}

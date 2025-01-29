@@ -14,6 +14,7 @@ class Messages {
     left: "50%",
     transform: "translate(-50%, 0)",
     display: "flex",
+    "z-index": 10,
     "font-weight": "500",
     "justify-content": "center",
     "align-items": "center",

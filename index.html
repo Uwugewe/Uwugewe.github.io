@@ -19,7 +19,11 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Zeyada&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="styles/main.css" />
+    <link rel="stylesheet" type="text/css" href="styles/media.css" />
+    <link rel="stylesheet" type="text/css" href="styles/keyframes.css" />
+    <link rel="stylesheet" type="text/css" href="styles/form.css" />
+    <link rel="stylesheet" type="text/css" href="styles/modal.css" />
     <link rel="shortcut icon" type="image/jpg" href="images/favicon.ico" />
   </head>
   <body>
@@ -164,10 +168,10 @@
           class="width--7 border-linear border-circled margin-top--2 margin-bottom--2 click-to-copy"
         >
           <div
-            class="content--center width--10 height--10 absolute border-circled bg--blured"
+            class="content--center width--10 height--10 absolute border-circled bg--blured-on-hover"
           >
             <span class="click-to-copy-message text--center text--biggest"
-              ><b>Kliknij aby skopiować!</b></span
+              ><b>Kliknij aby wyświetlić!</b></span
             >
           </div>
           <div class="click-to-copy-target">
@@ -192,29 +196,134 @@
         >
           Skontaktuj się z nami
         </h2>
-        <div class="margin-top--4 relative on_top">
-          <form action="https://formsubmit.co/ea6a002cadd74ba50a816b7d95d47da3" method="POST">
+        <div class="margin-top--4 relative width--7 on_top">
+          <form
+            action="https://formsubmit.co/ea6a002cadd74ba50a816b7d95d47da3"
+            method="POST"
+          >
             <p>Napisz bezpośrednio do nas</p>
-            <input type="email" name="email" placeholder="email" required /><br />
+            <input
+              class="width--7"
+              type="email"
+              name="email"
+              placeholder="email"
+              required
+            /><br />
             <textarea
+              class="width--7"
               placeholder="Napisz wiadomość"
               name="message"
               rows="10"
               required
-            ></textarea><br />
-            <input type="hidden" name="_captcha" value="false">
+            ></textarea
+            ><br />
+            <input type="hidden" name="_captcha" value="false" />
             <input type="submit" value="Wyślij" />
           </form>
-
-          <div class="drops">
-            <div class="drop drop-1"></div>
-            <div class="drop drop-2"></div>
-            <div class="drop drop-3"></div>
-            <div class="drop drop-4"></div>
-            <div class="drop drop-5"></div>
-          </div>
         </div>
       </section>
+    </div>
+    <div class="modal">
+      <article class="modal-container">
+        <header class="modal-container-header">
+          <h1 class="modal-container-title">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              aria-hidden="true"
+            >
+              <path fill="none" d="M0 0h24v24H0z" />
+              <path
+                fill="currentColor"
+                d="M14 9V4H5v16h6.056c.328.417.724.785 1.18 1.085l1.39.915H3.993A.993.993 0 0 1 3 21.008V2.992C3 2.455 3.449 2 4.002 2h10.995L21 8v1h-7zm-2 2h9v5.949c0 .99-.501 1.916-1.336 2.465L16.5 21.498l-3.164-2.084A2.953 2.953 0 0 1 12 16.95V11zm2 5.949c0 .316.162.614.436.795l2.064 1.36 2.064-1.36a.954.954 0 0 0 .436-.795V13h-5v3.949z"
+              />
+            </svg>
+            Wiadomość do zarządcy Twojej nieruchomości
+          </h1>
+          <button class="icon-button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+            >
+              <path fill="none" d="M0 0h24v24H0z" />
+              <path
+                fill="currentColor"
+                d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z"
+              />
+            </svg>
+          </button>
+        </header>
+        <section class="modal-container-body line-height--15">
+          <h3>
+            Temat: Prośba o dane nieruchomości do świadectwa charakterystyki
+            energetycznej
+          </h3>
+
+          <p>Szanowni Państwo,</p>
+
+          <p>
+            Zwracam się z uprzejmą prośbą o udostępnienie danych dotyczących
+            nieruchomości, które są niezbędne do sporządzenia świadectwa
+            charakterystyki energetycznej.
+          </p>
+
+          <p>
+            Proszę o podanie następujących informacji: Adres nieruchomości
+            (województwo, powiat, gmina, miejscowość, ulica, kod pocztowy, nr
+            domu/lokalu). Rodzaj i przeznaczenie budynku (np.
+            jednorodzinny/mieszkalny, wielorodzinny/usługowy). Powierzchnia
+            użytkowa (m², zgodnie z definicją w przepisach). Rok budowy (rok
+            zakończenia budowy lub oddania do użytku). Rzut i przekrój budynku
+            (proszę załączyć, jeśli dostępne).
+          </p>
+
+          <p>
+            Ogrzewanie: Rodzaj paliwa: np. gaz ziemny, biomasa, węgiel kamienny,
+            energia elektryczna, energia geotermalna, ciepło sieciowe. Źródło
+            ciepła: np. kotły (stałotemperaturowe, kondensacyjne, gazowe, na
+            biomasę, na węgiel), pompy ciepła (powietrze/woda, glikol/woda,
+            napędzane gazem lub elektrycznie), węzły cieplne (kompaktowe, z
+            obudową, bez obudowy). Regulacja instalacji ogrzewczej: np. systemy
+            dwustanowe, proporcjonalne, regulacja centralna lub miejscowa
+            (zawory termostatyczne). Przesył instalacji ogrzewczej: np. c.o. z
+            lokalnych źródeł ciepła (z izolowanymi/nieizolowanymi przewodami),
+            ogrzewanie powietrzne. Akumulacja ciepła: np. zasobnik w przestrzeni
+            ogrzewanej lub nieogrzewanej (różne parametry), system bez
+            zasobnika.
+          </p>
+
+          <p>
+            Ciepła woda użytkowa (CWU): Rodzaj paliwa i źródła ciepła: np. kotły
+            dwufunkcyjne, przepływowe podgrzewacze gazowe lub elektryczne, pompy
+            ciepła, węzły cieplne. Przesył CWU: np. systemy bez cyrkulacji lub z
+            cyrkulacją (izolowane/nieizolowane piony). Parametry zasobnika CWU:
+            np. zasobnik wyprodukowany przed 1995 r., po 2005 r., system bez
+            zasobnika.
+          </p>
+
+          <p>
+            Dane te są niezbędne do prawidłowego określenia charakterystyki
+            budynku i sporządzenia wymaganej dokumentacji. Proszę o ich
+            przesłanie w możliwie najkrótszym terminie.
+          </p>
+
+          <p>W razie pytań pozostaję do Państwa dyspozycji.</p>
+
+          <p>
+            Z poważaniem,<br />
+            [Twoje imię i nazwisko] <br />
+            [Twoja funkcja / firma]<br />
+            [Twoje dane kontaktowe]
+          </p>
+        </section>
+        <footer class="modal-container-footer">
+          <button class="button is-primary">Kopiuj</button>
+        </footer>
+      </article>
     </div>
     <div class="fb-widget-container">
       <button class="facebook-button">
@@ -257,6 +366,6 @@
   <script src="./scripts/animations.js"></script>
   <script src="./scripts/copy.js"></script>
   <script src="./scripts/messages.js"></script>
-  <script src="./scripts/widget.js"></script>
+  <script src="./scripts/triggers.js"></script>
   <script src="./scripts/main.js"></script>
 </html>
