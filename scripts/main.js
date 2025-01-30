@@ -19,7 +19,7 @@ const triggersProperties = [
   { trigger: '.modal .icon-button', target: '.modal', class: 'content--center' }
 ];
 
-const formProperties = ['input[type="submit"]'];
+const formProperties = ['contact-form'];
 
 new Animations(animationsProperties);
 new Copy(copyingProperties);

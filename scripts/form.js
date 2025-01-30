@@ -10,12 +10,13 @@ class Form {
     );
   };
 
-  init = (buttons) => {
-    buttons.forEach(button => {
-      const element = document.querySelector(button);
-      element.addEventListener('click', (e) => {
-        const email = e.target.form.querySelector('input[type=email]').value;
+  init = (forms) => {
+    forms.forEach(form => {
+      const element = document.getElementById(form);
+      element.addEventListener('submit', (e) => {
+        const email = element.querySelector('input[type=email]').value;
         if (!this.validate(email)) {
+          e.preventDefault();
           new Messages({ type: "Error", message: "Nieprawidłowy adres email", id: "form-message" });
         }
       });
