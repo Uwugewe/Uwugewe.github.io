@@ -1,24 +1,25 @@
+import Classes from './common/classes.js';
+
 class Triggers {
   constructor(properties){
-    this.properties = properties;
-    this.classes = new Classes;
+    this.init(properties);
   }
-  params = [];
-  classes = null;
 
   trigger(property){
     const trigger = document.querySelector(property.trigger);
     const target = document.querySelector(property.target);
     if (!trigger || !target) return;
     trigger.addEventListener('click', () => {
-      this.classes.toggle(target, property.class);
+      (new Classes).toggle(target, property.class);
     });
 
   }
 
-  init() {
-    this.properties.forEach(property => {
+  init(properties) {
+    properties.forEach(property => {
       this.trigger(property);
     });
   }
 }
+
+export default Triggers;

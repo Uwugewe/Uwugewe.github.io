@@ -1,12 +1,15 @@
+import Styles from './common/styles.js';
+import Classes from './common/classes.js';
+
 class Animations {
   constructor(properties) {
-    this.properties = properties;
+    this.init(properties);
     this.classes = new Classes;
     this.styles = new Styles;
   }
 
-  properties = [];
   classes = null;
+  styles = null;
 
   once = (property) => {
     window.addEventListener(property.event, () => {
@@ -38,8 +41,8 @@ class Animations {
     });
   };
 
-  init = () => {
-    this.properties.forEach(property => {
+  init = (properties) => {
+    properties.forEach(property => {
       switch (property.event) {
         case 'click':
           this.many(property);
@@ -54,3 +57,5 @@ class Animations {
     });
   }
 }
+
+export default Animations;

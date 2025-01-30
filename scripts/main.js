@@ -1,3 +1,8 @@
+import Copy from './copy.js';
+import Animations from './animations.js';
+import Triggers from './triggers.js';
+import Form from './form.js';
+
 const animationsProperties = [
   { event: 'load', target: 'header', animation: 'fadeIn', duration: 2 },
   { event: 'load', target: 'section', animation: 'fadeIn', duration: 2 },
@@ -14,10 +19,9 @@ const triggersProperties = [
   { trigger: '.modal .icon-button', target: '.modal', class: 'content--center' }
 ];
 
-const animations = new Animations(animationsProperties);
-const copying = new Copy(copyingProperties);
-const triggers = new Triggers(triggersProperties);
+const formProperties = ['input[type="submit"]'];
 
-animations.init();
-copying.init();
-triggers.init();
+new Animations(animationsProperties);
+new Copy(copyingProperties);
+new Triggers(triggersProperties);
+new Form(formProperties);

@@ -1,10 +1,11 @@
+import Messages from './common/messages/messages.js';
+
+const messageProperties = { type: "Success", message: "Skopiowano do schowka!", id: "copy" };
+
 class Copy {
   constructor(properties) {
-    this.properties = properties;
-    this.messages = new Messages;
+    this.init(properties);
   }
-  properties = [];
-  messages = null;
 
   copy = (property) => {
     const source = document.querySelector(property.source);
@@ -13,13 +14,15 @@ class Copy {
     source.addEventListener(property.event, () => {
       const text = target.outerText;
       navigator.clipboard.writeText(text);
-      this.messages.createNotification("Skopiowano do schowka!", "copy");
+      new Messages(messageProperties);
     });
   };
 
-  init = () => {
-    this.properties.forEach(property => {
+  init = (properties) => {
+    properties.forEach(property => {
       this.copy(property);
     });
   };
 }
+
+export default Copy;

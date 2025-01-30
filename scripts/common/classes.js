@@ -6,3 +6,5 @@ class Classes {
     target.classList.toggle(className);
   };
 }
+
+export default Classes;
