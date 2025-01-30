@@ -1,5 +1,4 @@
 form {
-  background: rgba(255, 255, 255, 0.3);
   padding: 3em;
   border-radius: 20px;
   border-left: 1px solid rgba(255, 255, 255, 0.3);
@@ -13,12 +12,11 @@ form {
 
 form p {
   font-weight: 500;
-  color: #fff;
+  color: #000;
   opacity: 0.7;
   font-size: 1.4rem;
   margin-top: 20px;
   margin-bottom: 40px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 form input,
@@ -27,13 +25,11 @@ form textarea {
   width: 200px;
   padding: 1em;
   margin-bottom: 2em;
-  border: none;
-  border-left: 1px solid rgba(255, 255, 255, 0.3);
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid #000;
   border-radius: 25px;
   backdrop-filter: blur(5px);
   box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
-  color: #fff;
+  color: #000;
   font-weight: 500;
   transition: all 0.2s ease-in-out;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -56,9 +52,9 @@ form input[type='email']:focus {
 }
 
 form input[type='submit'] {
-  margin-top: 10px;
+  margin-top: 25px;
   width: 150px;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 form input:active,
@@ -66,13 +62,9 @@ form textarea:active {
   background: rgba(255, 255, 255, 0.2);
 }
 
-form:hover {
-  margin: 4px;
-}
-
 ::placeholder {
   font-weight: 400;
-  color: #fff;
+  color: #000;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
