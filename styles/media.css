@@ -138,6 +138,11 @@
     margin-bottom: 0;
   }
 
+  .mobile-v-margins--0 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   .mobile-h-margins--1 {
     margin-top: 1;
     margin-bottom: 1;
