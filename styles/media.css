@@ -148,6 +148,10 @@
     margin-bottom: 1;
   }
 
+  form {
+    padding: 1rem !important;
+  }
+
   section h1,
   section h2 {
     text-align: center;
