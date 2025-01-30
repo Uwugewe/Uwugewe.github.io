@@ -112,13 +112,17 @@
   .mobile-width--7 {
     width: 70%;
   }
-  
+
   .mobile-width--8 {
     width: 80%;
   }
 
   .mobile-width--9 {
     width: 90%;
+  }
+
+  .mobile-margin-bottom--0 {
+    margin-bottom: 0;
   }
 
   section h1,
