@@ -125,6 +125,24 @@
     margin-bottom: 0;
   }
 
+  .mobile-margin-top--0 {
+    margin-top: 0;
+  }
+
+  .mobile-margin-bottom--2 {
+    margin-bottom: 2rem;
+  }
+
+  .mobile-h-margins--0 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .mobile-h-margins--1 {
+    margin-top: 1;
+    margin-bottom: 1;
+  }
+
   section h1,
   section h2 {
     text-align: center;
