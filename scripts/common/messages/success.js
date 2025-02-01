@@ -6,15 +6,16 @@ class Success {
     color: "#36d300",
     position: "fixed",
     top: "10px",
-    left: "50%",
-    transform: "translate(-50%, 0)",
+    margin: "auto",
+    left: 0,
+    right: 0,
     display: "flex",
     "z-index": 10,
     "font-weight": "500",
     "justify-content": "center",
     "align-items": "center",
     "border-radius": "7px",
-    "animation": "fadeInDown--fixed .5s",
+    "animation": "fadeInDown .5s",
   };
 }
 

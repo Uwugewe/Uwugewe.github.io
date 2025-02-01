@@ -9,7 +9,7 @@ const animationsProperties = [
   { event: 'scroll', target: 'header', animation: 'fadeIn', duration: 2 },
   { event: 'scroll', target: 'section', animation: 'fadeIn', duration: 2 },
   { event: 'load', target: '.modal-container', animation: 'bounceIn', duration: 0.5 },
-  { event: 'load', target: '#navigation .references', animation: 'fadeInDown--block', duration: 0.5 },
+  { event: 'load', target: '#navigation .references', animation: 'fadeInDown', duration: 0.5 },
 ];
 const copyingProperties = [
   { source: '.modal .button', target: '.modal-container-body', event: 'click' },
