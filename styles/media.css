@@ -151,11 +151,11 @@
 
   #navigation.expanded {
     flex-direction: column;
-    align-items: center;
     height: 20vh;
     font-size: 26px;
 
     a {
+      margin-left: 20px;
       display: inline-block;
     }
   }
