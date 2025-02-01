@@ -26,7 +26,8 @@ section {
 
 #navigation {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
+  align-items: flex-start;
   z-index: 4;
   position: fixed;
   padding: 20px 0;
@@ -41,14 +42,18 @@ section {
   box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
 
-  a {
+  .references {
+    opacity: 0;
+  }
+
+  .references a {
     text-decoration: none;
     color: #000;
     font-weight: 500;
   }
 }
 
-.hamburger {
+#navigation .hamburger-container {
   display: none;
 }
 

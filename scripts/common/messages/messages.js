@@ -29,7 +29,7 @@ class Messages {
   };
 
   removeNotification(div) {
-    div.style.animation = "fadeInUp .5s";
+    div.style.animation = "fadeInUp--fixed .5s";
     setTimeout(() => {
       div.remove();
     }, 450);

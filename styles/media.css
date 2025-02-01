@@ -122,16 +122,19 @@
     height: 6vh;
   }
 
-  #navigation a {
-    display: none;
+  #navigation .hamburger-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
   }
 
-  #navigation .hamburger {
-    display: block;
+  #navigation .hamburger-container .hamburger {
     width: fit-content;
-    position: absolute;
-    right: 20px;
-    top: 20px;
+    margin-right: 20px;
+  }
+
+  #navigation .hamburger-container img {
+    width: 100px;
   }
 
   #navigation .hamburger .line {
@@ -149,15 +152,20 @@
     cursor: pointer;
   }
 
+  #navigation .references {
+    display: none;
+  }
+
   #navigation.expanded {
     flex-direction: column;
-    height: 20vh;
+    height: 25vh;
     font-size: 26px;
+  }
 
-    a {
-      margin-left: 20px;
-      display: inline-block;
-    }
+  #navigation.expanded .references {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
   }
 
   #navigation.expanded .hamburger .line:nth-child(2) {
@@ -182,7 +190,7 @@
   #requirements,
   #contact,
   #prices {
-    scroll-margin-top: 20vh;
+    scroll-margin-top: 25vh;
   }
 
   .mobile-width--7 {

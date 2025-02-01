@@ -28,16 +28,20 @@
   </head>
   <body>
     <nav id="navigation">
-      <div class="hamburger">
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
+      <div class="hamburger-container">
+        <img src="images/logo.webp" alt="logo" />
+        <div class="hamburger">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
       </div>
-      <a href="#about"> Jak pracujemy? </a>
-      <a href="#requirements"> Czego wymagamy? </a>
-      <a href="#contact"> Kontakt </a>
-      <a href="#prices"> Cennik </a>
-    </div>
+      <div class="references column--center width--10 content--space-evenly">
+        <a href="#about"> Jak pracujemy? </a>
+        <a href="#requirements"> Czego wymagamy? </a>
+        <a href="#contact"> Kontakt </a>
+        <a href="#prices"> Cennik </a>
+      </div>
     </nav>
     <div class="bg--orange-to-white">
       <header class="column--center margin--auto margin-bottom--1">
@@ -211,9 +215,7 @@
     </div>
     <div class="mobile-padding--1">
       <div class="bg--orange-to-white">
-        <section
-          class="column--center row--nowrap padding--4 margin--auto"
-        >
+        <section class="column--center row--nowrap padding--4 margin--auto">
           <h2
             class="text--center text--letter-spacing-large text--biggest margin-top--4 margin-bottom--4 width--7 mobile-margin-top--0 mobile-margin-bottom--2"
           >
@@ -245,7 +247,10 @@
         </section>
       </div>
       <div class="bg--white-to-orange">
-        <section id="contact" class="column--center row--nowrap padding--4 margin--auto">
+        <section
+          id="contact"
+          class="column--center row--nowrap padding--4 margin--auto"
+        >
           <h2
             class="text--center text--letter-spacing-large text--biggest margin-top--4 margin-bottom--4 width--7 mobile-margin-bottom--2"
           >
@@ -298,7 +303,7 @@
     </div>
     <div class="modal">
       <article class="modal-container">
-        <header class="modal-container-header">
+        <div class="modal-container-header">
           <h1 class="modal-container-title">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -329,7 +334,7 @@
               />
             </svg>
           </button>
-        </header>
+        </div>
         <section class="modal-container-body line-height--15">
           <h3>
             Temat: Prośba o dane nieruchomości do świadectwa charakterystyki

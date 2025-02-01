@@ -14,7 +14,7 @@ class Success {
     "justify-content": "center",
     "align-items": "center",
     "border-radius": "7px",
-    "animation": "fadeInDown .5s",
+    "animation": "fadeInDown--fixed .5s",
   };
 }
 
