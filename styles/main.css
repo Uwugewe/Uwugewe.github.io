@@ -11,7 +11,7 @@ body {
 }
 
 header {
-  padding: 9vh 10px 10px 10px;
+  padding: 14vh 10px 10px 10px;
 }
 
 section {
@@ -25,6 +25,8 @@ section {
 }
 
 #navigation {
+  display: flex;
+  justify-content: space-evenly;
   z-index: 4;
   position: fixed;
   padding: 20px 0;
@@ -37,11 +39,17 @@ section {
   border-radius: 0 0 10px 10px;
   background-color: rgba(255, 255, 255, 0.5);
   box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+
   a {
     text-decoration: none;
     color: #000;
     font-weight: 500;
   }
+}
+
+.hamburger {
+  display: none;
 }
 
 footer {

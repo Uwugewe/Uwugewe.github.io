@@ -16,7 +16,8 @@ const copyingProperties = [
 const triggersProperties = [
   { trigger: '.facebook-button', target: '.fb-widget-container', class: 'width--340px' },
   { trigger: '.click-to-copy', target: '.modal', class: 'content--center' },
-  { trigger: '.modal .icon-button', target: '.modal', class: 'content--center' }
+  { trigger: '.modal .icon-button', target: '.modal', class: 'content--center' },
+  { trigger: 'nav .hamburger', target: '#navigation', class: 'expanded' }
 ];
 
 const formProperties = ['contact-form'];
