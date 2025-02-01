@@ -95,6 +95,10 @@
     padding: 10px;
   }
 
+  header {
+    padding: 130px 10px 10px 10px;
+  }
+
   header div {
     display: flex !important;
     flex-direction: column !important;
@@ -104,13 +108,9 @@
     width: 90% !important;
   }
 
-  section {
-    flex-direction: column !important;
-  }
-
-  section .mobile--column {
+  .mobile--column {
     max-width: 100% !important;
-    width: max-content !important;
+    width: fit-content !important;
     display: flex;
     flex-direction: column !important;
   }
@@ -119,7 +119,7 @@
     max-width: 100vw;
     width: 100vw;
     border-radius: 0;
-    height: 6vh;
+    height: 50px;
   }
 
   #navigation .hamburger-container {
@@ -158,8 +158,8 @@
 
   #navigation.expanded {
     flex-direction: column;
-    height: 27vh;
     font-size: 26px;
+    height: 200px;
   }
 
   #navigation.expanded .references {
