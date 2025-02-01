@@ -209,6 +209,10 @@ hr {
   width: 340px !important;
 }
 
+.width--100px {
+  width: 60px !important;
+}
+
 .height--10 {
   height: 100%;
 }
