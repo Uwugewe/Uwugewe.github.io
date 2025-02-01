@@ -144,7 +144,7 @@
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
-  
+
   #navigation .hamburger:hover {
     cursor: pointer;
   }
@@ -176,6 +176,13 @@
     -ms-transform: translateY(-13px) rotate(-45deg);
     -o-transform: translateY(-13px) rotate(-45deg);
     transform: translateY(-13px) rotate(-45deg);
+  }
+
+  #about,
+  #requirements,
+  #contact,
+  #prices {
+    scroll-margin-top: 20vh;
   }
 
   .mobile-width--7 {
