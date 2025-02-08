@@ -1,8 +1,8 @@
 class Classes {
-  add(target, className) {
+  static add(target, className) {
     target.classList.add(className);
   };
-  toggle(target, className){
+  static toggle(target, className){
     target.classList.toggle(className);
   };
 }

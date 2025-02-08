@@ -1,16 +1,16 @@
 import Classes from './common/classes.js';
 
 class Triggers {
-  constructor(properties){
+  constructor(properties) {
     this.init(properties);
   }
 
-  trigger(property){
+  trigger(property) {
     const trigger = document.querySelector(property.trigger);
     const target = document.querySelector(property.target);
     if (!trigger || !target) return;
     trigger.addEventListener('click', () => {
-      (new Classes).toggle(target, property.class);
+      Classes.toggle(target, property.class);
     });
 
   }

@@ -4,8 +4,6 @@ import Classes from './common/classes.js';
 class Animations {
   constructor(properties) {
     this.init(properties);
-    this.classes = new Classes;
-    this.styles = new Styles;
   }
 
   classes = null;
@@ -19,9 +17,9 @@ class Animations {
         if (coordinates.top >= 0 &&
           coordinates.top + (window.innerHeight / 4) <= (window.innerHeight || document.documentElement.clientHeight)) {
           const end = (property.duration * 1000) - 500;
-          this.styles.add(target, "animation", `${property.animation} ${property.duration}s`);
+          Styles.add(target, "animation", `${property.animation} ${property.duration}s`);
           setTimeout(() => {
-            this.classes.add(target, 'opacity--1');
+            Classes.add(target, 'opacity--1');
           }, end);
         }
       });

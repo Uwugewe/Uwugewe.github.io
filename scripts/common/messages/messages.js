@@ -15,11 +15,11 @@ class Messages {
     const notification = document.querySelector(`#${properties.id}`);
     if (notification) return;
 
-    const {styles} = this.messageProperties;
+    const { styles } = this.messageProperties;
     const div = document.createElement("div");
 
     div.id = properties.id;
-    (new Styles).addMany(div, styles);
+    Styles.addMany(div, styles);
     div.innerText = properties.message;
 
     document.querySelector('body').appendChild(div);
@@ -29,7 +29,7 @@ class Messages {
   };
 
   removeNotification(div) {
-    (new Styles).add(div, "animation", "fadeInUp .5s");
+    Styles.add(div, "animation", "fadeInUp .5s");
     setTimeout(() => {
       div.remove();
     }, 450);
