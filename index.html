@@ -71,8 +71,12 @@
     <header class="site-header" id="top">
       <div class="container nav-wrap">
         <a class="brand" href="#top" aria-label="Wood & Glass - strona główna">
-          <span class="brand-mark" aria-hidden="true">W&G</span>
-          <span class="brand-text">WOOD <i>&</i> GLASS</span>
+          <img
+            class="brand-logo"
+            src="assets/images/woodandglass-logo.png"
+            alt="Wood & Glass — Wellness Spaces"
+            width="300px"
+          />
         </a>
 
         <button
@@ -102,7 +106,9 @@
         <div class="hero-glow" aria-hidden="true"></div>
         <div class="container hero-grid">
           <div class="hero-copy reveal">
-            <p class="eyebrow">Sauny i strefy wellness na wymiar</p>
+            <p class="eyebrow">
+              Sauny i strefy wellness dopasowane do Twojego wnętrza
+            </p>
             <h1 id="hero-title">
               Tworzymy miejsca, w których <span>odpoczniesz.</span>
             </h1>
@@ -110,7 +116,7 @@
               Projektujemy i wykonujemy sauny oraz łaźnie parowe. Naszym
               priorytetem jest zapewnienie trwałości, komfortu i perfekcyjnego
               wykończenia. Doświadczenie zdobywaliśmy przy wymagających
-              realizacjach w Polsce i Europie.
+              realizacjach w Polsce i za granicą.
             </p>
             <div class="hero-actions">
               <a class="btn" href="#kontakt">Umów bezpłatną konsultację</a>
@@ -143,7 +149,7 @@
         </div>
       </section>
 
-      <section class="trust-strip" aria-label="Zakres doświadczenia">
+      <!-- <section class="trust-strip" aria-label="Zakres doświadczenia">
         <div class="container trust-grid">
           <span>Hotele</span>
           <span>Obiekty sportowe</span>
@@ -151,7 +157,7 @@
           <span>Strefy premium</span>
           <span>Realizacje zagraniczne</span>
         </div>
-      </section>
+      </section> -->
 
       <section class="section" id="oferta" aria-labelledby="offer-title">
         <div class="container">
@@ -171,7 +177,7 @@
 
           <div class="service-grid">
             <article class="service-card reveal">
-              <span class="service-no">01</span>
+              <!-- <span class="service-no">01</span> -->
               <h3>Sauny wewnętrzne</h3>
               <p>
                 Sauny dopasowane do wnętrza domu, apartamentu, hotelu lub
@@ -179,7 +185,7 @@
               </p>
             </article>
             <article class="service-card reveal">
-              <span class="service-no">02</span>
+              <!-- <span class="service-no">02</span> -->
               <h3>Sauny zewnętrzne</h3>
               <p>
                 Nowoczesne sauny ogrodowe projektowane z myślą o trwałości i
@@ -187,7 +193,7 @@
               </p>
             </article>
             <article class="service-card reveal">
-              <span class="service-no">03</span>
+              <!-- <span class="service-no">03</span> -->
               <h3>Sauny infrared</h3>
               <p>
                 Rozwiązania z promiennikami podczerwieni, które można dopasować
@@ -195,7 +201,7 @@
               </p>
             </article>
             <article class="service-card reveal">
-              <span class="service-no">04</span>
+              <!-- <span class="service-no">04</span> -->
               <h3>Sauny hybrydowe</h3>
               <p>
                 Połączenie klasycznej sauny i technologii infrared w jednej
@@ -203,7 +209,7 @@
               </p>
             </article>
             <article class="service-card reveal">
-              <span class="service-no">05</span>
+              <!-- <span class="service-no">05</span> -->
               <h3>Łaźnie parowe</h3>
               <p>
                 Kompleksowe wykonanie nowoczesnych stref parowych z dbałością o
@@ -211,7 +217,7 @@
               </p>
             </article>
             <article class="service-card service-card-accent reveal">
-              <span class="service-no">+</span>
+              <!-- <span class="service-no">+</span> -->
               <h3>Szkło i kabiny prysznicowe</h3>
               <p>
                 Montaż szklanych kabin prysznicowych - precyzja, którą
@@ -377,7 +383,7 @@
 
           <ol class="process-list">
             <li class="reveal">
-              <span>01</span>
+              <div class="content-centered"><i data-lucide="phone"></i></div>
               <div>
                 <h3>Rozmowa i konsultacja</h3>
                 <p>
@@ -387,7 +393,9 @@
               </div>
             </li>
             <li class="reveal">
-              <span>02</span>
+              <div class="content-centered">
+                <i data-lucide="hand-coins"></i>
+              </div>
               <div>
                 <h3>Propozycja i bezpłatna wycena</h3>
                 <p>
@@ -396,7 +404,9 @@
               </div>
             </li>
             <li class="reveal">
-              <span>03</span>
+              <div class="content-centered">
+                <i data-lucide="presentation"></i>
+              </div>
               <div>
                 <h3>Projekt i wykonanie</h3>
                 <p>
@@ -406,7 +416,7 @@
               </div>
             </li>
             <li class="reveal">
-              <span>04</span>
+              <div class="content-centered"><i data-lucide="drill"></i></div>
               <div>
                 <h3>Montaż i odbiór</h3>
                 <p>
@@ -416,7 +426,7 @@
               </div>
             </li>
             <li class="reveal">
-              <span>05</span>
+              <div class="content-centered"><i data-lucide="headset"></i></div>
               <div>
                 <h3>Opieka po realizacji</h3>
                 <p>
@@ -447,20 +457,22 @@
 
             <div class="contact-links">
               <a href="mailto:biuro@woodandglass.pl">
-                <span class="contact-icon" aria-hidden="true">@</span>
+                <span class="contact-icon" aria-hidden="true"
+                  ><i data-lucide="at-sign"></i
+                ></span>
                 <span
                   ><small>E-mail</small
                   ><strong>biuro@woodandglass.pl</strong></span
                 >
               </a>
               <a href="tel:+48506958938">
-                <span class="contact-icon" aria-hidden="true">☎</span>
+                <span class="contact-icon" aria-hidden="true"
+                  ><i data-lucide="phone"></i
+                ></span>
                 <span><small>Telefon</small><strong>506-958-938</strong></span>
+                <span><small>&nbsp</small><strong>533-633-920</strong></span>
               </a>
             </div>
-            <p class="contact-person">
-              Kontakt: <strong>Paweł Tokarski</strong>
-            </p>
           </div>
 
           <form class="contact-form reveal" id="contact-form">
@@ -522,11 +534,13 @@
     <footer class="site-footer">
       <div class="container footer-grid">
         <div>
-          <a class="brand brand-footer" href="#top"
-            ><span class="brand-mark">W&G</span
-            ><span class="brand-text">WOOD <i>&</i> GLASS</span></a
-          >
-          <p>Sauny, łaźnie parowe i szkło wykonywane z precyzją.</p>
+          <a class="brand brand-footer" href="#top">
+            <img
+              class="brand-logo"
+              src="assets/images/woodandglass-logo.png"
+              alt="Wood & Glass — Wellness Spaces"
+              width="300px"
+          /></a>
         </div>
         <div>
           <h2>Oferta</h2>
@@ -539,6 +553,8 @@
           <h2>Kontakt</h2>
           <a href="mailto:biuro@woodandglass.pl">biuro@woodandglass.pl</a>
           <a href="tel:+48506958938">506-958-938</a>
+          <a href="tel:+48533633920">533-633-920</a>
+
           <a href="#kontakt">Bezpłatna wycena</a>
         </div>
       </div>
@@ -571,5 +587,6 @@
     </dialog>
 
     <script src="js/main.js" defer></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
   </body>
 </html>

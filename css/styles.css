@@ -382,7 +382,7 @@ textarea:focus-visible {
 }
 .service-card {
   position: relative;
-  min-height: 255px;
+  min-height: 200px;
   padding: 34px;
   border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
@@ -408,7 +408,7 @@ textarea:focus-visible {
   font-weight: 800;
 }
 .service-card h3 {
-  margin: 56px 0 8px;
+  margin: 0 0;
   font-size: 24px;
   letter-spacing: -0.02em;
 }
@@ -556,6 +556,15 @@ textarea:focus-visible {
 .process-list p {
   margin: 0;
   color: var(--muted);
+}
+
+.process-list .content-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--surface-2);
+  color: var(--accent);
+  font-weight: 800;
 }
 
 .cta-section {
