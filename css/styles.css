@@ -24,8 +24,9 @@ html {
 }
 body {
   margin: 0;
-  color: var(--text);
-  background: var(--surface);
+  color: #fff;
+  /* background: var(--surface); */
+  background: #1a1713;
   font-family:
     Inter,
     ui-sans-serif,
@@ -417,16 +418,16 @@ textarea:focus-visible {
   color: var(--muted);
 }
 .service-card-accent {
-  background: var(--bg);
-  color: var(--text-on-dark);
+  /* background: var(--bg); */
+  /* color: var(--text-on-dark); */
 }
 .service-card-accent p {
-  color: var(--muted-dark);
+  /* color: var(--muted-dark); */
 }
 .service-card-accent .service-no {
   border-color: var(--line-dark);
 }
-.service-card-accent:hover {
+.service-card:hover {
   background: #211d18;
 }
 
@@ -473,7 +474,8 @@ textarea:focus-visible {
 }
 
 .gallery-section {
-  background: #f7f3ed;
+  /* background: #f7f3ed; */
+  background: #1a1713;
 }
 .gallery {
   display: grid;
@@ -528,7 +530,7 @@ textarea:focus-visible {
 }
 
 .section-soft {
-  background: var(--surface-2);
+  /* background: var(--surface-2); */
 }
 .process-list {
   list-style: none;
@@ -562,13 +564,14 @@ textarea:focus-visible {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--surface-2);
+  /* background: var(--surface-2); */
   color: var(--accent);
   font-weight: 800;
 }
 
 .cta-section {
-  background: #f7f3ed;
+  /* background: #f7f3ed; */
+  background: #1a1713;
 }
 .contact-grid {
   display: grid;
@@ -593,7 +596,7 @@ textarea:focus-visible {
   padding: 16px;
   border: 1px solid var(--line);
   border-radius: 14px;
-  background: white;
+  /* background: white; */
 }
 .contact-links a:hover {
   border-color: rgba(200, 144, 85, 0.55);
@@ -604,7 +607,7 @@ textarea:focus-visible {
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: var(--surface-2);
+  /* background: var(--surface-2); */
   color: var(--accent);
   font-weight: 800;
 }
