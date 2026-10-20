@@ -284,6 +284,12 @@ footer {
 /* MOBILE */
 @media screen and (max-width: 700px) {
   #navigation {
+    background-color: var(--bg-light);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 6px 18px rgba(42, 33, 28, 0.08);
+  }
+
+  #navigation .hamburger .line {
     background-color: var(--text-dark);
   }
 
@@ -291,10 +297,28 @@ footer {
     gap: 0;
     margin-left: 0;
     margin-right: 0;
+    padding: 8px 20px 12px;
+    background-color: var(--bg-light);
   }
 
-  #navigation.expanded .references a {
-    color: #f3e7d3;
+  #navigation .references a {
+    width: 100%;
+    padding: 10px 8px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-dark);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-align: center;
+  }
+
+  #navigation .references a:last-child {
+    border-bottom: 0;
+  }
+
+  #navigation .references a:hover,
+  #navigation .references a.active {
+    color: var(--red);
+    border-bottom-color: var(--accent);
   }
 
   .hero {

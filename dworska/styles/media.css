@@ -13,37 +13,40 @@
   }
 
   #navigation {
-    max-width: 100vw;
-    width: 100vw;
+    max-width: 100%;
+    width: 100%;
     border-radius: 0;
-    height: 50px;
-    background-color: var(--green);
+    height: 56px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
   }
 
   #navigation .hamburger-container {
     display: flex;
     width: 100%;
+    height: 56px;
+    flex: 0 0 56px;
+    align-items: center;
     justify-content: space-between;
   }
 
   #navigation .hamburger-container .hamburger {
-    width: fit-content;
-    margin: 0 20px;
-  }
-
-  #navigation .hamburger-container img {
-    width: 100px;
+    display: flex;
+    width: 44px;
+    height: 44px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin: 0 16px;
   }
 
   #navigation .hamburger .line {
-    width: 50px;
-    height: 5px;
-    background-color: #ecf0f1;
+    width: 24px;
+    height: 2px;
     display: block;
-    margin: 8px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+    transition: transform 0.25s ease, opacity 0.2s ease;
   }
 
   #navigation .hamburger:hover {
@@ -56,18 +59,13 @@
 
   #navigation.expanded {
     flex-direction: column;
-    font-size: 26px;
-    height: 250px;
+    height: 240px;
   }
 
   #navigation.expanded .references {
     display: flex;
     flex-direction: column;
-    margin: 20px 0 0 0;
-  }
-
-  #navigation.expanded .references a {
-    color: #fff;
+    margin: 0;
   }
 
   #navigation.expanded .hamburger .line:nth-child(2) {
@@ -75,17 +73,11 @@
   }
 
   #navigation.expanded .hamburger .line:nth-child(1) {
-    -webkit-transform: translateY(13px) rotate(45deg);
-    -ms-transform: translateY(13px) rotate(45deg);
-    -o-transform: translateY(13px) rotate(45deg);
-    transform: translateY(13px) rotate(45deg);
+    transform: translateY(7px) rotate(45deg);
   }
 
   #navigation.expanded .hamburger .line:nth-child(3) {
-    -webkit-transform: translateY(-13px) rotate(-45deg);
-    -ms-transform: translateY(-13px) rotate(-45deg);
-    -o-transform: translateY(-13px) rotate(-45deg);
-    transform: translateY(-13px) rotate(-45deg);
+    transform: translateY(-7px) rotate(-45deg);
   }
 
   .hero {
